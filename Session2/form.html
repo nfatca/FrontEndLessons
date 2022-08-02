@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formlar</title>
+    <style>
+        #seker{
+            width: 50%;
+            border: 3px orange solid;
+        }
+        #yorum{
+            resize: none;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Clarusway</h1>
+    <form action="result.html" method="get">
+
+        <div>
+            <label for="name">Adınızı Giriniz :</label>
+            <input type="text" name="isim" id="name" placeholder="İsminizi giriniz..." size="25" >
+            <br>
+            <label for="surname">Soyadınızı Giriniz :</label>
+            <input type="text" name="soyad" id="surname" placeholder="Soyadınızı giriniz...">
+
+        </div>
+        <div>
+            <label for="sifre">Parolanızı giriniz :</label>
+            <input type="password" name="Girilen Parola" id="sifre">
+        </div>
+        <div>
+            
+            <p>Cinsiyetinizi giriniz :</p>
+            <label for="gender1">Erkek</label>
+            <input type="radio" name="cinsiyet" id="gender1" value="Erkek" checked>
+            <br>
+            <label for="gender2">Kadın</label>
+            <input type="radio" name="cinsiyet" id="gender2" value="Kadın">
+        </div>
+        <div>
+            <p>Günleri seçiniz</p>
+            <input type="checkbox" name="gün_1" id="Pazartesi" value="Pazartesi">
+            <label for="Pazartesi">Pazartesi</label>
+            <input type="checkbox" name="gün_2" id="Salı" value="Salı">
+            <label for="Salı">Salı</label>
+            <input type="checkbox" name="gün_3" id="Carsamba" value="Çarşamba">
+            <label for="Carsamba">Çarşamba</label>
+            <input type="checkbox" name="gün_4" id="Persembe" value="Perşembe">
+            <label for="Persembe">Perşembe</label>
+            <input type="checkbox" name="gün_5" id="Cuma" value="Cuma">
+            <label for="Cuma">Cuma</label>
+        </div>
+
+        <div>
+            <label for="age">Yaş :</label>
+            <input type="number" name="Girilen yaş" id="age" step="2" min="1">
+        </div>
+        <div>
+            <label for="search">Ara :</label>
+            <input type="search" name="Aranan kelime" id="search" maxlength="6">
+        </div>
+        <div>
+            <label for="renk">Renk Seçin</label>
+            <input type="color" name="Seçilen_renk" id="renk">
+        </div>
+        <div>
+            <label for="tarih">Tarih seçin :</label>
+            <input type="date" name="Tutulan tarih" id="tarih">
+        </div>
+        <div>
+            <label for="email">Email girin</label>
+            <input type="email" name="Girilen_email" id="email">
+        </div>
+        <div>
+            <label for="dosya">Dosya seç </label>
+            <input type="file" name="Secilen_dosya" id="dosya">
+        </div>
+        <div>
+            <label for="telefon">Telefon Numarası</label>
+            <input type="tel" name="Tel_no" id="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="xxx-xxx-xx-xx">
+        </div>
+
+        <div>
+            <label for="seker">Hangi tatlıyı istersiniz:</label>
+            <br>
+            <select name="secilen_tatlı" id="seker" value="" size="7" multiple>
+                <optgroup label="Sütlü">
+                    <option value="sutlac">Sütlaç</option>
+                    <option value="keskul">Keşkül</option>
+                    <option value="asure">Aşure</option>
+                    <option value="kazandibi">Kazandibi</option>
+                    <option value="magnolya">Magnolya</option>
+                </optgroup>
+                </optgroup>
+                <optgroup label="Şerbetli">
+                    <option value="baklava">Baklava</option>
+                    <option value="künefe">Künefe</option>
+                    <option value="Havuc_dilim">Havuç dilim</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="yorum">Görüşleriniz yazınız</label>
+            <br>
+            <textarea name="Girilen_yorum" id="yorum" placeholder="Yorum Lütfen..."></textarea>
+            <br><br>
+        </div>
+
+        <div>
+            <label for="browser">Browsers :</label>
+            <input type="text" name="Kullanılan_browser" id="browser" list="browser_list">
+            <datalist id="browser_list">
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Safari"></option>
+                <option value="Brave"></option>
+            </datalist>
+            <br><br>
+
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Kişisel Bilgiler</legend>
+                <label for="fname">İsim</label>
+                <input type="text" name="isim" id="fname">
+                <br>
+                <label for="lname">Soyisim</label>
+                <input type="text" name="s_isim" id="lname">
+
+            </fieldset>
+        </div>
+
+
+
+        <br><br><br><br><br>
+        <input type="submit" value="Gönder">
+        <br><br><br>
+        <input type="reset" value="Sıfırla">
+
+    </form>
+</body>
+</html>
