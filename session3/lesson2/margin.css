@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+.box1{
+    background-color: coral;
+}
+.box2{
+    background-color: olive;
+    border: 3px solid red;
+    /*margin: 20px;*/
+    margin: inherit;
+    padding: 12px;
+
+}
+.box3{
+    background-color: orange;
+}
+.container{
+    background-color: blue;
+    margin: 50px;
+}
