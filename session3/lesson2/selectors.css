@@ -1,0 +1,37 @@
+/* Grup Seçiciler */
+
+div{
+    color: black;
+    /*border: 2px solid red;*/
+}
+
+div p{
+    border: 2px solid red;
+}
+
+.container div p {
+    background-color: darkkhaki;
+}
+
+p + div {
+
+    background-color: aqua;
+}
+
+p[title="baslık1"]{
+    background-color: crimson;
+}
+p[title="baslık2"]{
+    background-color: gray;
+}
+
+h1[title="baslık3"]{
+    background-color: darkgoldenrod;
+}
+p::first-letter{
+    font-size: 2rem;
+}
+p::first-line{
+    font-style:italic ;
+    font-weight: bold;
+}

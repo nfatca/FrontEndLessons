@@ -1,0 +1,24 @@
+.box1{
+    /*background-color: tomato;*/
+    /*background-color: #ff0000;*/
+    background-color: hsl(120, 100%, 50%);
+}
+.box2{
+    /*background-color: lime;*/
+    background-color: hsl(120, 100%, 25%);
+}
+.box3{
+    /*background-color: coral;*/
+    background-color: hsl(120, 100%, 100%);
+}
+.box4{
+    background-color: red;
+}
+.box5{
+    /*background-color: gray;*/
+    background-color: hsl(120, 100%, 0%);
+}
+.box6{
+    /*background-color: magenta;*/
+    background-color: rgb(200, 15, 15);
+}
