@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+}
+#par1{
+    color: blue;
+    text-align: center;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    column-count: 3;
+    column-rule: 3px solid blue;
+}
+#par2{
+    color: rgba(255, 0, 0, 1);
+    text-align:right ;
+    text-shadow: 3px 3px 5px red;
+}
+#par3{
+    color: #3700ff;
+    text-align: justify;
+    text-decoration: line-through dashed red 5px;
+    line-height: 2rem;
+    letter-spacing: 10px;
+}
+#par4{
+    color: hsl(0, 100%, 50%);
+    text-decoration: underline;
+}
+#par5{
+    color: fuchsia;
+    text-decoration: overline wavy blue;
+    word-spacing: 1rem;
+    font-family: 'Yellowtail' , cursive;
+}
