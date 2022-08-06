@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1> Clarusway Survey Form</h1>
+        <p>Thank you for taking the time to help us improve the platform</p>
+        <form action="result.html">
+            <label for="name">Name</label>
+            <br><br>
+            <input type="text" name="Name" id="name" placeholder="Enter your name">
+            <br>
+            <label for="surname">Surname</label>
+            <br><br>
+            <input type="text" name="SurName" id="surname" placeholder="Enter your surname">
+            <br>
+            <label for="mail">Email</label>
+            <br><br>
+            <input type="email" name="Email" id="mail" placeholder="user@clarusway.com">
+            <br>
+            <p>Which option best describes your current role?</p>
+            <select name="contect_type" id="current" >
+                <option value="select">Select current role</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="DevOps">DevOps</option>
+            </select>
+            <p>Would you recommend Clarusway to a friend</p>
+            <input type="radio" name="recommend" id="Yes">
+            <label for="Yes">Definitely, Yes</label>
+            <br>
+            <input type="radio" name="recommend" id="maybe">
+            <label for="maybe">Maybe</label>
+            <br>
+            <input type="radio" name="recommend" id="notSure">
+            <label for="notSure">Not sure</label>
+            <br>
+            <input type="radio" name="recommend" id="no">
+            <label for="no">Definitely, No</label>
+            <br>
+            <p>What is your favorite feature of Clarusway?</p>
+            <select name="contect_type" id="current" >
+                <option value="select">Select option</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="DevOps">DevOps</option>
+            </select>
+            <p>What would like to see improved?(Check all that apply)</p>
+                <input type="checkbox" name="Frontend" id="front">
+                <label for="front">Front-end Projects</label><br>
+                <input type="checkbox" name="Backend" id="back">
+                <label for="back">Back-end Projects</label><br>
+                <input type="checkbox" name="DataScience" id="data">
+                <label for="data">Data Science</label><br>
+                <input type="checkbox" name="Additional Courses" id="addition">
+                <label for="addition">Additional Courses</label><br><br>
+            <label for="comment">Any comments or suggestions?</label>
+            <br><br>
+            <textarea name="feedBack" id="comment" placeholder="Enter your comment here...Thanks for your..." ></textarea>
+
+            <input type="submit" value="submit">
+        </form>
+
+    </div>
+
+</body>
+</html>
