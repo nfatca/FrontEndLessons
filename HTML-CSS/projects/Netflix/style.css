@@ -1,0 +1,54 @@
+
+.container{
+    background-image: url(./background_image.jpg) ;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    
+}
+.container h1 span{
+    color: red;
+}
+.header{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.267);
+    margin: 5px 20px;
+}
+.header h1{
+    font-size: 3rem;
+}
+.header p{
+    font-size: 1.5rem;
+}
+.box{
+    /* border: 2px red solid; */
+    height: 830px;
+    width: 400px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.661);
+    text-align: left;
+    padding:20px ;
+
+}
+#comment{
+    height: 40px;
+    width: 300px;
+}
+#name, #age, #email{
+    width: 400px;
+    height: 40px;
+}
+#type{
+    width: 350px;
+    height: 40px;
+}
+#submit{
+    border: 2px solid red;
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    margin-left: 130px;
+        
+}
