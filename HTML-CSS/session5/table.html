@@ -1,29 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
-</head>
-<body>
+    <style>
+        caption{
+            font-weight: 900;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+        table,th,td{
+            border: 2px solid black ;
+            border-collapse: collapse;  /* içiçe çift çizgiler olmasın diye */
+        }
+        table{
+            width: 100%;
+        }
+        th{
+            height: 30px;
+            vertical-align: bottom;
+            padding: 10px;
+            /* background-color: rgb(45, 42, 42); */
+            color: orange;
+            
+        }
+        #baslik{  /* th sabit tutma */
+            position: sticky;
+            top: 0;
+            background-color: red;
+        }
+        td{
+            height: 25px;
+            /* background-color: darkcyan; */
+        }
+        td:hover{
+            background-color: bisque;
+        }
+        tr:nth-child(even){
+            background-color: lightgray;
+        }
+        tr:nth-child(odd){
+            background-color: darkgray;
+        }
+        tr:hover{ 
+            background-color: chocolate;
+        }   /* bunun çalışması için td'ye backgroundcolor verilmeyecek ve en altta olacak */
+        tr:first-child{
+            background-color: yellow; /* th'ye background-color verilmezse bunu alır */
+        }
+
+    </style>
+  </head>
+  <body>
     <table>
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Age</th>
-            </tr>
-
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-
-
+      <caption>
+        List
+      </caption>
+      <thead>
+        <tr id="baslik">
+          <th>No</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Martin</td>
+          <td>Smith</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Eden</td>
+          <td>Jones</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Harrison</td>
+          <td>Almeida</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Carter</td>
+          <td>Martin</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        <tr>
+          <td>5</td>
+          <td>Herry</td>
+          <td>Wilson</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Susan</td>
+          <td>Garcia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Betty</td>
+          <td>Murhy</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Barney</td>
+          <td>Peeters</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>James</td>
+          <td>Rossi</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oliver</td>
+          <td>Gruber</td>
+          <td>26</td>
+        </tr>
+      </tbody>
     </table>
-</body>
+  </body>
 </html>
