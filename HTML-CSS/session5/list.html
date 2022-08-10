@@ -8,11 +8,45 @@
     <style>
         ul{
             /* padding: 5px; */
+            /* list-style-type: none; */
         }
         .item{
             /* list-style-type: georgian; */
             /* list-style-position: inside; */
-            list-style-type: "😅";
+            /* list-style-type: "\1F60D"; */
+            list-style-image: url(./img/locaiton.png);
+        }
+        li::before{
+            /* content: "\2764";
+            color: tomato;
+            padding-right: 10px; */
+        }
+        ol{
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        ol li{
+            border: 1px solid darkorange;
+            border-radius: 25px;
+            margin: 10px;
+            padding-left: 1rem;
+            background-color: lightblue;
+            border-left: 7px solid gray;
+            color: brown;
+            width: 15rem;
+            /* display: inline-block; */
+
+        }
+        ol li:hover{
+            background-color: gray;
+            color: lightblue;
+            cursor: pointer;
+        }
+        ol li::before{
+            content: "\8544";
         }
 
 
@@ -28,6 +62,15 @@
         <li class="item item4">item4</li>
         <li class="item item5">item5</li>
     </ul>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+
+    </ol>
 </body>
 </html>
 
