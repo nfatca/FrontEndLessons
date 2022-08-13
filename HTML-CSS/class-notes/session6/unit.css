@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+}
+body{
+    /* border: 2px solid red; */
+    height: 100vh; /* görünen ekranın tamamı yüksekliğinde */
+    /* background-color: khaki; */
+}
+.abs{
+    background-color: aqua;
+    width: 5cm;
+}
+
+.div2{
+    /* border: 2px solid red; */
+    background-color: chocolate;
+    width: 50%;
+    height: 50%;
+}
+
+.div3{
+    /* border: 2px solid red; */
+    background-color: yellow;
+    width: 50%;
+    height: 50vh; /* vh kullanınca body'nin %50'sini alıyor */
+}
+
+.div4{
+    background-color: darkmagenta;
+    width: 50vw;
+}
+
+.div5{
+    font-size: 1em; /* 16 px */
+    
+}
+.div6{
+    font-size: 2em; /* 32 px çünkü div5'ın 2 katı olur*/
+}
+.div7{
+    font-size: 3em; /* 96px çünkü div6'nın 3 katı olur */
+}
+
