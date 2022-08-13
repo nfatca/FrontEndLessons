@@ -1,6 +1,9 @@
 *{
     margin: 0;
 }
+html{
+    font-size: 16px; /* burada yazdığımız fontsize tüm kodu kapsar ve 1rem değeri bu değere eşit olur */
+}
 body{
     /* border: 2px solid red; */
     height: 100vh; /* görünen ekranın tamamı yüksekliğinde */
@@ -31,7 +34,7 @@ body{
 }
 
 .div5{
-    font-size: 1em; /* 16 px */
+    font-size: 1em; /* 16 px */ /* em bir üstündeki kapsayıcın değerini alır */
     
 }
 .div6{
@@ -39,5 +42,14 @@ body{
 }
 .div7{
     font-size: 3em; /* 96px çünkü div6'nın 3 katı olur */
+}
+.div8{
+    font-size: 1rem; /* rem html'in ana fontsize değerini alır */
+}
+.div9{
+    font-size: 2rem; 
+}
+.div10{
+    font-size: 3rem; 
 }
 
