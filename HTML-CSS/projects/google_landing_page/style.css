@@ -1,0 +1,130 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    height: 8%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about a{
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+}
+.about a:hover {
+    text-decoration: underline;
+    
+}
+
+.buttons {
+    display: flex;
+    /* width: 2rem; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+.buttons a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.buttons a:hover{
+    text-decoration: underline;
+}
+
+.buttons img{
+    width: 2rem;
+    border: 5px solid rgb(255, 255, 255) ;
+    border-radius: 50%;
+}
+
+.buttons img:hover{
+    border: 5px solid rgb(218, 217, 217) ;
+    border-radius: 50%;
+}
+
+.search img{
+    width: 1.2rem;
+}
+
+.search input{
+    width: 35rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    border:1px solid rgb(213, 203, 203) ;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search input:hover{
+    background-color: rgb(232, 231, 231);
+}
+
+.search #img1{
+    position: relative;
+    left: -550px;
+    top: 7px;
+}
+.search #img2{
+    position: relative;
+    left: -60px;
+    top: 10px;
+}
+
+.main{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 10rem; */
+}
+
+
+.search_button{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.search_button button{
+    padding: 8px;
+    margin-right: 1rem;
+    background-color: rgb(216, 210, 210);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.search_button button:hover{
+    border: 1px solid black;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin: 1rem;
+}
+
+footer a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    text-decoration: underline;
+}
