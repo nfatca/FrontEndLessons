@@ -1,0 +1,26 @@
+.box{
+    border: 5px solid red;
+    margin-bottom: 4rem;
+    width: 15rem;
+    height: 4rem;
+    background-color: bisque;
+}
+
+.box1{
+    overflow: visible;
+}
+.box2{
+    overflow: hidden;
+}
+.box3{
+    overflow: scroll;
+}
+.box4{
+    overflow: auto;
+}
+.box5{
+    overflow-y: scroll;
+}
+.paragraf{
+    width: 50rem;
+}
