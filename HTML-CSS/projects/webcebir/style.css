@@ -1,0 +1,44 @@
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    width: 100vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    
+}
+header{
+    height: 9%;
+    background-color: black;
+    color: white;
+    font-size: 4rem;
+    padding-left:2rem ;
+    padding-top: 2rem;
+    
+
+}
+header span{
+    color: yellow;
+}
+.link{
+    background-color: yellow;
+}
+.link a{
+    /* border: 2px red solid; */
+    margin-left: 3rem ;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+.link a:hover{
+    color: yellow;
+    background-color: black;
+}
+.box{
+    border: 2px solid black;
+}
