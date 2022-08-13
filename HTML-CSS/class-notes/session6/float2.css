@@ -30,6 +30,9 @@ article{
     width: 70%;
     height: 300px;
     float: left;
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */ /* box içindeki yazıyı ortalıyor */
 }
 
 footer{
