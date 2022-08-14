@@ -6,10 +6,12 @@
     
 }
 .container{
-    width: 100vh;
+    width: 100%;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: white;
     
 }
 header{
@@ -26,14 +28,16 @@ header span{
     color: yellow;
 }
 .link{
-    background-color: yellow;
+    height: 5%;
+    background-color: rgb(222, 201, 11);
 }
 .link a{
-    /* border: 2px red solid; */
-    margin-left: 3rem ;
+    border: 2px red solid;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 .link a:hover{
     color: yellow;
@@ -41,4 +45,7 @@ header span{
 }
 .box{
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
