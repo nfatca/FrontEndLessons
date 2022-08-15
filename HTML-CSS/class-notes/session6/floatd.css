@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+}
+.img-float{
+    width: 30%;
+    float: left; /* fotograf bu şekilde sayfada yüzmeye başlıyor */
+    margin-right: 10px ;
+    /* margin-left: 5px; */
+}
+.par{
+    background-color: orange;
+    text-align: justify;
+}
+.clear{
+    clear: both;
+}
+.box{
+    float: left;
+    font-size: 2rem;
+    width: 33.3%;
+    text-align: center;
+}
+.box1{
+    background-color: aqua;
+
+}
+
+.box2{
+    background-color: gold;
+}
+
+.box3{
+    background-color: violet;
+}
