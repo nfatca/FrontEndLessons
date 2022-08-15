@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100vw;
+    height: 10rem;
+    text-align: center;
+    line-height: 10rem;
+    background-color: plum;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.nav{
+    width: 100vw;
+    height: 3rem;
+    list-style: none;
+    text-align: center;
+    line-height: 3rem;
+    background-color:rgb(99, 99, 226) ;
+}
+
+.nav li{
+    display: inline;
+    margin-right: 2rem;
+}
+
+.aside{
+    width: 25vw;
+    height: 20rem;
+    background-color: darkgoldenrod;
+    float: left;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main{
+    background-color: gainsboro;
+    width: 100vw;
+    height: 20rem;
+    text-align: justify;
+    padding-left: 22rem;
+    padding-right: 2rem;
+}
+
+.footer{
+    width: 100vw;
+    height: 5rem;
+    text-align: justify;
+    background-color: darkgray;
+    margin-top: 0.5rem;
+}
