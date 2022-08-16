@@ -1,0 +1,28 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav.yatay-menu ul li a{
+    text-decoration: none;
+}
+nav.yatay-menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+nav.yatay-menu ul li {
+    display: inline-block;
+    background-color: wheat;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 5rem;
+    border-radius: 20px;
+}
+nav.yatay-menu ul li:hover{
+    background-color: tomato;
+    cursor: pointer;
+    
+}
+nav.yatay-menu ul li:hover a{
+    color: white;
+}
