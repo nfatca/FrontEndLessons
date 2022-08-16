@@ -2,6 +2,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/*********** YATAY MENU ***********/
+
 nav.yatay-menu ul li a{
     text-decoration: none;
 }
@@ -25,4 +27,23 @@ nav.yatay-menu ul li:hover{
 }
 nav.yatay-menu ul li:hover a{
     color: white;
+}
+
+/*********** ACILIR MENU ***********/
+
+nav.acilir-menu{
+    border: 1px solid red;
+    width: 10rem;
+}
+
+nav.acilir-menu ul{
+    display: none;
+}
+
+nav.acilir-menu .fa-bars:active{
+    opacity: 0.5;
+}
+
+nav.acilir-menu:hover ul{
+    display: block;
 }
