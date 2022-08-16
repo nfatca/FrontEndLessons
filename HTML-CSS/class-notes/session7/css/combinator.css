@@ -1,0 +1,42 @@
+/** COMBINATORS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /** Descendent Selector*/
+  /*! kutu class'ı icerisinde tüm p'leri sec */
+  
+  /* .kutu p {
+    color: red;
+  } */
+  
+  /** Child Selector */
+  /*! parent'i kutu class olan tüm p'leri seç */
+  /* .kutu > p {
+    color: purple;
+  } */
+  
+  /*! h1 elementi kapandiktan sonraki ilk p elementi secer */
+  /** Adjacent Sibling */
+  h1 + p {
+    color: green;
+  }
+  
+  /*! h1 elementinden sonraki tüm p elementlerini seçer */
+  /** general sibling selector */
+  h1 ~ p {
+    color: hotpink;
+  }
+  
+  h3 {
+    margin: 2rem;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid red;
+    outline: 3px solid purple;
+    outline-offset: 1rem;
+    border-radius: 50%;
+  }
+  
