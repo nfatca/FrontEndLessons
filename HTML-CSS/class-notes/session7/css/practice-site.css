@@ -39,16 +39,18 @@ nav.nav-top img{
 /********** NAV-MAIN  */
 
 .nav-main{
-    background-color: rgb(227, 188, 91);
+    background-color: #ffaa53;
     height: 5rem;
     text-align: center;
 }
 .nav-main a{
+    font-family: 'DynaPuff';
     text-decoration: none;
     color: black;
     padding: 2rem;
     line-height: 5rem;
-    font-weight: 900;
+    font-weight: 600;
+    position: sticky;
 }
 .nav-main a:hover{
     color: white;
