@@ -38,3 +38,34 @@ nav.nav-top img{
 }
 /********** NAV-MAIN  */
 
+.nav-main{
+    background-color: rgb(227, 188, 91);
+    height: 5rem;
+    text-align: center;
+}
+.nav-main a{
+    text-decoration: none;
+    color: black;
+    padding: 2rem;
+    line-height: 5rem;
+    font-weight: 900;
+}
+.nav-main a:hover{
+    color: white;
+}
+.slack {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    background-color: red;
+    font-size: 2rem;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.2rem;
+    }
+.slack i:hover{
+    color: black;
+}
