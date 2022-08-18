@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Jost&family=Open+Sans:wght@600&family=Source+Sans+Pro&display=swap');
+
+
+
+:root {
+    --mavi1: hsl(205, 100%, 30%);
+    --mavi2: hsl(205, 100%, 40%);
+    --mavi3: hsl(205, 100%, 50%);
+    --mavi4: hsl(205, 100%, 60%);
+    --mavi5: hsl(205, 100%, 70%);
+
+    /* asil renklerin acik tonları */
+    --mavi-6: hsl(205, 89%, 70%);
+    --mavi-7: hsl(205, 90%, 76%);
+    --mavi-8: hsl(205, 86%, 81%);
+    --mavi-9: hsl(205, 90%, 88%);
+    --mavi-10: hsl(205, 100%, 96%);
+    --mavi-11: hsl(205, 3%, 95%);
+
+    /* Basliklar icin kullanilan koyu tonlar */
+    --gri-1: hsl(209, 61%, 16%);
+    --gri-2: hsl(211, 39%, 23%);
+    --gri-3: hsl(209, 34%, 30%);
+    --gri-4: hsl(209, 28%, 39%);
+
+    /* Paragraflar icin kullanilan renkler */
+    --gri-5: hsl(210, 22%, 49%);
+    --gri-6: hsl(209, 23%, 60%);
+    --gri-7: hsl(211, 27%, 70%);
+    --gri-8: hsl(210, 31%, 80%);
+    --gri-9: hsl(212, 33%, 89%);
+    --gri-10: hsl(210, 36%, 96%);
+
+    --mor: hsl(276, 85%, 49%);
+
+    --beyaz: #fff;
+    --koyu-kirmizi: hsl(360, 67%, 44%);
+    --acik-kirmizi: hsl(360, 71%, 66%);
+    --koyu-yesil: hsl(125, 67%, 44%);
+    --acik-yesil: hsl(125, 71%, 66%);
+    --siyah: #222;
+
+    /* Color Theme Swatches in Hex */
+    --Grafik-Tasarım-1-hex: color: #BF212E;
+    --Grafik-Tasarım-2-hex: color: #2651A6;
+    --Grafik-Tasarım-3-hex: color: #3767A6;
+    --Grafik-Tasarım-4-hex: color: #A6662E;
+
+    /* **** fonts *****/
+
+    --ff-wide: 'Audiowide', cursive;
+    --ff-jost: 'Jost', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff-sans-pro: 'Source Sans Pro', sans-serif;
+
+
+    /********** Box Shadows  *********/
+
+    --koyu-golge: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    --acik-gogle: 0px 5px 15px rgba(0, 0, 0, 0.1);
+
+}
