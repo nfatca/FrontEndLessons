@@ -1,0 +1,21 @@
+@import "theme.css";
+
+body {
+  font-family: var(--ff-wide);
+}
+
+h1 {
+  font-family: var(--ff-jost);
+}
+
+div {
+  box-shadow: var(--koyu-golge);
+  width: 50vw;
+  margin: 1rem auto;
+  max-width: 600px;
+  min-width: 400px;
+}
+p {
+  background-color: var(--gri-1);
+  color: var(--gri-3);
+}
