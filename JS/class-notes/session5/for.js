@@ -83,7 +83,7 @@ while(tahmin_sayisi<=5){
     }
 } */
 
-const sayi = Number(prompt("Bir Sayı Giriniz"));
+/* const sayi = Number(prompt("Bir Sayı Giriniz"));
 if (sayi <= 1) {
   alert("SAYI 1'den Büyük Olmalıdır");
 } else {
@@ -99,4 +99,33 @@ if (sayi <= 1) {
         break;
       }
     }
-}
+} */
+
+// let sayi = Math.round(Math.random() * 100); //! *** math.random() parantezi unutmuşsunuz ****/
+// let hak = 5;
+// console.log(hak);
+// console.log(sayi);
+// let tahmin = +prompt("Lütfen 1 ile 100 arası bir sayı giriniz"); //! ***burada + yazmayı unutmuşsunuz ****/
+// while (hak > 0) {
+//   if (tahmin == sayi) {
+//     alert("tebrikler bildiniz");
+//     break;
+//   } else if (tahmin > sayi) {
+//     hak--;
+//     alert("lütfen tahmininizi azaltın ");
+//     tahmin = +prompt("Lütfen 1 ile 100 arası bir sayı giriniz"); //! ***burada girdi almayı unutmuşsunuz ****/
+//   } else if (tahmin < sayi) {
+//     hak--;
+//     alert("lütfen tahminizi arttırın");
+//     tahmin = +prompt("Lütfen 1 ile 100 arası bir sayı giriniz"); //! ***burada girdi almayı unutmuşsunuz ****/
+//   }
+//   if (hak == 0) {
+//     alert("Üzgünüm oyunu kaybettiniz");
+//     let talep = prompt("tekrar oynamak istermisiniz");
+//     if (talep == "e") {
+//       hak = 5;
+//     } else {
+//       alert("Oyun Bitti");
+//     }
+//   }
+// }
