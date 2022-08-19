@@ -20,7 +20,6 @@ console.log(`sayı toplamı ${toplam}`); */
 //* Math.round() => degerine gore yuvarlar.
 //* Math.trunc() => kesirli sayinin tam kismini alir.
 
-
 //* Asal Sayı Bulma
 
 /*  let sayi = +prompt("Sayıyı giriniz");
@@ -64,7 +63,7 @@ while (i<0 || i>100) {
 
 //* tahmin ödevi
 
-let sayi = Math.round(Math.random()*100) ;
+/* let sayi = Math.round(Math.random()*100) ;
 
 let tahmin_sayisi = 1
 
@@ -81,5 +80,23 @@ while(tahmin_sayisi<=5){
             console.log("Azalt")
         console.log(`Yeniden deneyiniz ${5-tahmin_sayisi} hakkınız kaldı`);
         tahmin_sayisi +=1 ;
+    }
+} */
+
+const sayi = Number(prompt("Bir Sayı Giriniz"));
+if (sayi <= 1) {
+  alert("SAYI 1'den Büyük Olmalıdır");
+} else {
+  if (sayi == 2) {
+    console.log(`${sayi} Asaldır`);
+  } else
+    for (let i = 2; i < sayi; i++) {
+      if (sayi % i === 0) {
+        console.log(`${sayi} Asal Değildir`);
+        break;
+      } else {
+        console.log(`${sayi} Asaldır`);
+        break;
+      }
     }
 }
