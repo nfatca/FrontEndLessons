@@ -29,9 +29,9 @@ const buyukBul = function (x, y, z = Number.MIN_VALUE) {
   }
 };
 
-const n1 = +prompt("Sayi1:");
+/* const n1 = +prompt("Sayi1:");
 const n2 = +prompt("Sayi2:");
 const n3 = +prompt("Sayi3:");
 
-console.log(buyukBul(n1, n2, n3));
+console.log(buyukBul(n1, n2, n3)); */
 console.log(buyukBul(-87, -8));
