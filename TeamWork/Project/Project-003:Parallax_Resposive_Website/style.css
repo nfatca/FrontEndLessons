@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*   opacity: 0.9;
+ */
+}
+body,
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #666;
+}
+.image {
+  background-image: url(./img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+.image2 {
+  background-image: url(./img/bg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+.image3 {
+  background-image: url(./img/bg3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+.image4 {
+  background-image: url(./img/bg4.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+.image5 {
+  background-image: url(./img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+.intext {
+  position: relative;
+  top: 40%;
+  left: 40%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  background-color: black;
+  color: white;
+  width: 25rem;
+  height: 7rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 0.6rem;
+  padding: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  line-height: 5rem;
+}
+.intext2 {
+  text-align: center;
+}
+.intext2 img {
+  width: 25%;
+  margin: 1rem;
+  text-align: center;
+}
+.intext3 {
+  position: relative;
+  top: 40%;
+  left: 25%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  background-color: black;
+  color: white;
+  width: 50rem;
+  height: 5rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 0.6rem;
+  padding: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  line-height: 3rem;
+}
+.intext4 {
+  position: relative;
+  top: 40%;
+  left: 35%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  background-color: black;
+  color: white;
+  width: 30rem;
+  height: 5rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 0.6rem;
+  padding: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  line-height: 3rem;
+}
+.intext5 {
+  position: relative;
+  top: 40%;
+  left: 30%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  background-color: black;
+  color: white;
+  width: 45rem;
+  height: 5rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 0.6rem;
+  padding: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  line-height: 3rem;
+}
+.text {
+  width: 95vw;
+  height: 15rem;
+  text-align: center;
+  margin: auto;
+  color: #666;
+  margin-top: 3rem;
+}
+.text1 {
+  /*   width: 95vw;*/
+  height: 15rem;
+  text-align: center;
+  margin: auto;
+  color: #666;
+  padding-top: 2rem;
+  background-color: #282e34;
+  color: #ddd;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
