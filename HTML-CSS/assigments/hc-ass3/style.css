@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.logo {
+  background-color: hotpink;
+  padding: 1rem;
+}
+.menu {
+  background-color: tomato;
+  padding: 1rem;
+}
+.banner {
+  background-color: orange;
+  padding: 4rem;
+}
+.bolum1 {
+  background-color: greenyellow;
+  padding: 14rem;
+  border: 1px solid gray;
+}
+.bolum2 {
+  background-color: greenyellow;
+  padding: 14rem;
+  border: 1px solid gray;
+}
+.bolum3 {
+  background-color: greenyellow;
+  padding: 14rem;
+  border: 1px solid gray;
+}
+.bolum4 {
+  background-color: tomato;
+  border: 1px solid gray;
+  padding: 1rem;
+}
+.bolum5 {
+  background-color: tomato;
+  border: 1px solid gray;
+  padding: 1rem;
+}
+.bolum6 {
+  background-color: tomato;
+  border: 1px solid gray;
+  padding: 1rem;
+}
+.footer {
+  background-color: purple;
+  padding: 2rem;
+}
