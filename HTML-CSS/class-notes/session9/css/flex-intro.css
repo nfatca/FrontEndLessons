@@ -1,0 +1,116 @@
+* {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+.container {
+  background-color: fuchsia;
+  display: flex;
+  /* flex-direction: row-reverse;*/ /** div'leri tersten yazar */
+  /*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
+  flex-direction: row; /** Default değeri row */
+
+  flex-wrap: wrap; /** satıra sığmayan boxlar alt satıra geçer  */
+  /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+
+  justify-content: space-around; /** boxların sağa sola veya center'a hizalama  */
+  /*! Yatay Hizalama: justify-content
+  /** flex-start, flex-end, center, space-around, space-evenly, space-between*/
+
+  gap: 20px 30px; /** boxlar arası boşluk yapar. ilk ölçü satırlar arası, ikinci ölçü sütunlar arası  */
+  /*?gap, flex içerisindeki elemanların dikey ve yatay boşluklarını belirlemek için kullanılabilir. ilk yazılan yatay (satırlar arası) boşluk, 2. yazılan ise dikey (sutunlar arası) boşluktur */
+}
+
+.container div {
+  background-color: gold;
+  width: 5rem;
+  height: 5rem;
+  /* margin: 1rem; */
+}
+
+.container1 {
+  height: 20rem;
+  background-color: greenyellow;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  padding: 0.5rem;
+
+  justify-content: center;
+  /*!  */
+
+  align-items: center;
+  /*! dikey hizalama  => align-items ******** flex-direction column kullanılırsa yatay hizalama yapar ****
+  /** flex-start, flex-end, center, stretch, baseline */
+
+  align-content: flex-end;
+  /*! çok satırlı verilerin dikey hizalamasında kullanılır(align-items yerine) */
+
+  overflow: auto;
+}
+
+.container1 div {
+  height: 5rem;
+  width: 5rem;
+  background-color: tomato;
+}
+
+/** FLEX-GROW */
+
+.container2 {
+  background-color: hotpink;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container2 div {
+  background-color: khaki;
+  /* width: 10rem; */
+  flex-grow: 1;
+
+  flex-basis: 0;
+  /*! flex-basis item'lara ihtiyacı kadar yer tahsis ediyor veya sadece icerigin buyuklugu kadar bir uzunluk veriyor (flex-basis:0); */
+}
+div.grow2 {
+  flex-grow: 2;
+}
+div.grow3 {
+  flex-grow: 3;
+}
+div.nogrow {
+  flex-grow: 0;
+}
+
+/** FLEX-GROW (width)*/
+
+.container3 {
+  background-color: hotpink;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  width: 50vw;
+}
+
+.container3 div {
+  background-color: khaki;
+  /* width: 10rem; */
+}
+
+div.div1 {
+  width: 10%;
+}
+div.div2 {
+  width: 20%;
+}
+div.div3 {
+  width: 30%;
+}
+div.div4 {
+  /* width: 40%; */
+}
