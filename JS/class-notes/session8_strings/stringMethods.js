@@ -205,7 +205,25 @@ console.log(ramazan.trim().length); //27
 //! ODEV1: tarkan string'indeki kelimelerin sayisini donduren
 //! bir fonksiyon yaziniz.
 
+const trkn = "Gel gunduzle gece olalim";
+const kelimeSayisi = (cumle) => {
+  const splitedd = cumle.split(" ");
+  return `${trkn} değişkeni ${splitedd.length} kelimeden oluşmaktadır.`;
+};
+
+console.log(kelimeSayisi(trkn));
+
 //! ODEV2:
 //! ----------------------------------------------------------
 // https://www.youtube.com/watch?v=b7vfp5G4brE
 // https://youtu.be/b7vfp5G4brE
+
+const site = "https://www.youtube.com/watch?v=b7vfp5G4brE";
+const siteKısaltma = (site) => {
+  site = site.replace("www.youtube.com", "youtu.be");
+  const index1 = site.indexOf("w");
+  const index2 = site.indexOf("=");
+  site = site.slice(0, index1) + site.slice(index2 + 1);
+  console.log(site);
+};
+siteKısaltma(site);
