@@ -77,17 +77,17 @@
 }
 .bolum1 {
   background-color: greenyellow;
-  padding: 14rem;
+  height: calc(100vh - 20rem);
   border: 1px solid gray;
 }
 .bolum2 {
   background-color: greenyellow;
-  padding: 14rem;
+  height: calc(100vh - 20rem);
   border: 1px solid gray;
 }
 .bolum3 {
   background-color: greenyellow;
-  padding: 14rem;
+  height: calc(100vh - 20rem);
   border: 1px solid gray;
 }
 .bolum4 {
