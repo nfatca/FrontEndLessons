@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "aside main main main"
+    "footer footer footer footer";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 10vh calc(100vh - (20vh + 200px)) 10vh;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.header {
+  background-image: url(https://cdn.pixabay.com/photo/2016/05/11/13/20/keyboard-1385706_960_720.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: header;
+}
+nav {
+  background-color: lightskyblue;
+  grid-area: nav;
+}
+aside {
+  background-color: lightyellow;
+  grid-area: aside;
+}
+main {
+  background-color: tomato;
+  grid-area: main;
+}
+footer {
+  background-color: turquoise;
+  grid-area: footer;
+}
