@@ -1,0 +1,42 @@
+@import "theme.css";
+
+* {
+  box-sizing: border-box;
+  margin: 1rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+
+  /*!Sırasıyla 200px, 40vw ve 20rem'lik 3 adet sütun tanımlama*/
+  grid-template-columns: 200px 40vw 20rem;
+
+  /*! Sırasıyla 100px, 200px,20vh ve 4rem'lik yüksekliğe sahip 4 adet satır tanımla (4x3 Grid)*/
+  grid-template-rows: 100px 300px 20vh 4rem;
+  gap: 1rem 1rem;
+
+  /*! Grid seviyesinde hizalama  */
+  justify-content: center;
+
+  /*! Tüm gridleri kendi grid alanlarına göre dikey olarak hizlama  */
+  /*? center'da itemlar auto height alır*/
+  /* align-items: center; */
+}
+.content {
+  background-color: var(--mavi-6);
+  border: 2px black solid;
+
+  /*! Grid Container içerisindeki item'lara Flex özelliği kazandırılabilir.Böylece item'ların içerisindeki content'lerin yatay ve dikey hizalaması yapılabilir. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content7 {
+  background-image: url("https://picsum.photos/id/684/600/400");
+  background-size: cover;
+  background-position: center;
+}
+.content5 {
+  background-color: var(--mor);
+}
