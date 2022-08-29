@@ -1,6 +1,6 @@
 console.log("Running");
 
-let area = function () {
+let area = () => {
   let a = +prompt("Entered the a");
   let b = +prompt("Entered the b");
   let c = +prompt("Entered the c");
