@@ -1,6 +1,6 @@
 console.log("Running");
 
-let gregorian = function () {
+let leap = function () {
   let year = +prompt("Enter the Year");
   if (year % 4 == 0) {
     if (year % 100 == 0) {
@@ -13,4 +13,4 @@ let gregorian = function () {
   }
 };
 
-console.log(gregorian());
+console.log(leap());
