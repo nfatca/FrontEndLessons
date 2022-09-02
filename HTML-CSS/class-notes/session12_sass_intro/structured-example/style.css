@@ -1,8 +1,19 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: pink;
-  font-size: 1.2rem;
-  color: white;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 14 |     border: $myBorder;
+ *    |             ^^^^^^^^^
+ *    '
+ *   sass/components/_articles.scss 14:13  @forward
+ *   sass/components/_index.scss 1:1       @use
+ *   sass/style.scss 7:1                   root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 14 \2502      border: $myBorder;\a    \2502              ^^^^^^^^^\a    \2575 \a   sass/components/_articles.scss 14:13  @forward\a   sass/components/_index.scss 1:1       @use\a   sass/style.scss 7:1                   root stylesheet";
+}
