@@ -1,0 +1,29 @@
+//************ BANNER ***********/
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bannerBgColor;
+  padding: 1rem;
+  line-height: 2rem;
+  aside {
+    button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: $navBgColor;
+      margin-top: 1rem;
+      margin-right: 00.5rem;
+      &:hover {
+        background-color: pink;
+        cursor: pointer;
+      }
+    }
+  }
+  img {
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+  }
+}
