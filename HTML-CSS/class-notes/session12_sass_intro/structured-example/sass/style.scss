@@ -2,9 +2,11 @@
 //* STYLE:SCSS
 //*********************************************/
 
+@use "./abstracts/variables" as v;
+
 body {
-  font-family: $fontFamily;
-  background-color: $bgColor;
-  font-size: $fontSize;
-  color: $fontColor;
+  font-family: v.$fontFamily;
+  background-color: v.$bgColor;
+  font-size: v.$fontSize;
+  color: v.$fontColor;
 }
