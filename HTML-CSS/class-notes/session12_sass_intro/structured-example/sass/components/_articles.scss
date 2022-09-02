@@ -4,6 +4,8 @@
 //! @EXTEND
 //************
 
+@use "../abstracts/variables" as *;
+
 .articles {
   display: flex;
   padding: 1rem;

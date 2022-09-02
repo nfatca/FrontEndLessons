@@ -1,19 +1,19 @@
 //************ CARDS ***********/
-
+@use "../abstracts/mixins" as m;
 .cards {
   display: flex;
   gap: 0.5rem;
   padding: 0.8rem;
   .card1 {
-    @include myBox(green, white);
+    @include m.myBox(green, white);
   }
   .card2 {
-    @include myBox(brown, white);
+    @include m.myBox(brown, white);
   }
   .card3 {
-    @include myBox(yellow, black);
+    @include m.myBox(yellow, black);
   }
   .card4 {
-    @include myBox(lightblue, white);
+    @include m.myBox(lightblue, white);
   }
 }

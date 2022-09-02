@@ -1,5 +1,7 @@
 //************ HEADER ***********/
 
+@use "../abstracts/variables" as *;
+
 header {
   background-color: $navBgColor;
   display: flex;
