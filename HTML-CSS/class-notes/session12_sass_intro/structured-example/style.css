@@ -144,6 +144,7 @@ header ul li {
 }
 header ul li:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 header a {
   color: white;

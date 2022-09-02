@@ -21,6 +21,7 @@ header {
       padding: 0.5rem;
       &:hover {
         text-decoration: underline;
+        cursor: pointer;
       } //! içinde bulunduğumuz elementi refere etmek için & işareti kullanılır
     }
   }
