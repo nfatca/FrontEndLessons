@@ -2,12 +2,11 @@
 
 @import "./abstracts/mixins", "./abstracts/variables";
 
-@import "./components/footer", "./components/nav", "./components/responsive";
-
 @import "./pages/about", "./pages/contact", "./pages/home", "./pages/projects";
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
 
+@import "./components/footer", "./components/nav", "./components/responsive";
 body {
   font-family: $font-family;
   line-height: 1;
