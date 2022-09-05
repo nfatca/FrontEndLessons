@@ -107,6 +107,43 @@ footer.vertical .copyright {
   margin: 0.3rem 0;
 }
 
+.contact-bgImg-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.contact-bgImg-container nav {
+  height: 40vh;
+}
+
+.contact {
+  border: 2px solid red;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+}
+.contact .text-secondary {
+  color: #ff652f;
+}
+
 .home-bgImg-container {
   height: 100vh;
   width: 100%;
