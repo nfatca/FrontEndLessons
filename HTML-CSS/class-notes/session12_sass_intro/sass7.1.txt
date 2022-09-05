@@ -1,0 +1,43 @@
+main.sass
+|
+|--abstracts
+|      _variables.sass           // Tüm global değişkenler bu dosyada tutulur
+|      _functions.sass           // Tüm fonksiyonlar bu dosyada tutulur. 
+|      _mixins.sass              // Tüm mixin tanımlamaları bu klasörde yapılır.
+|
+|--base
+|       _reset.sass               // HTML taglarının stil resetleri bu dosyada yapılır.
+|       _typography.sass          // Tipografi yani yazı fontu tanımlamaları
+|      ...
+|
+|--components
+|       _buttons.sass             // Buton stilleri burada tanımlanır.
+|       _dropdown.sass            // Dropdown (Açılır Menü) stilleri burada tanımlanır. 
+|       _carousel.sass            // Carousel, slider stilleri burada tanımlanır. 
+|       ...
+|
+|--layout
+|      _header.sass              // header'a ait stil tanımlamaları 
+|      _footer.sass              // footer'a ait stil tanımlamaları
+|      _navigation.sass          // navigasyon yani menülere ait stil tanımlamaları
+|      _forms.sass               // kullandığınız formlara ait stil tanımlamaları
+|      _sidebar.sass             // varsa sidebar'a ait stil tanımlamaları
+|      _grid.sass                // kendi grid sisteminize ait stil tanımlamaları 
+|      ...
+|
+|--pages
+|      _home.sass                // anasayfaya ait stil tanımlamaları.
+|      _about.sass               // hakkımızda/kurumsal sayfasına ait stil tanımlamaları
+|      _contact.sass             // iletişim sayfasına ait stil tanımlamaları
+|      _products.sass            // (varsa) ürünler sayfasına ait stil tanımlamaları
+|      ...
+|
+|--themes
+|      _default.sass             // varsayılan temaya ait stil tanımlamaları
+|      _dark.sass                // (varsa) koyu temanıza ait stil tanımlamalaarı
+|      _light.sass               // (varsa) açık temanıza ait stil tanımlamaları
+|      ...
+|
+|--vendors
+|      _bootstrap.sass            // Bootstrap kullanıyorsanız, ona ait sass dosyası
+|      ...
