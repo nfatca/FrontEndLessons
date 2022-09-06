@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <title>GRID</title>
+  </head>
+  <body>
+    <!-- <div class="container-fluid text-light text-center">
+      <h1 class="text-dark">GRID</h1>
+
+      <div class="row">
+        <div class="col bg-warning">-</div>
+        <div class="col bg-info">-</div>
+        <div class="col-1 bg-secondary">1</div>
+        <div class="col-5 bg-warning">5</div>
+        <div class="col-5 bg-info">5</div>
+        <div class="col-3 bg-secondary">3</div>
+        <div class="col-2 bg-warning">2</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 bg-danger">4</div>
+      </div>
+    </div>
+    <hr />
+    <h1>D-FLEX ALIGN</h1>
+    <div
+      class="container border border-danger text-light display-2 text-center"
+    >
+      <div class="row justify-content-center">
+        <div class="col-4 bg-success">center</div>
+        <div class="col-3 bg-warning">center</div>
+      </div>
+
+      <div class="row justify-content-evenly">
+        <div class="col-3 bg-secondary">evenly</div>
+        <div class="col-4 bg-info">evenly</div>
+      </div>
+    </div>
+    <hr />
+
+    <h1>BreakPoint</h1>
+
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-danger">1</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-warning">2</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-info">3</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-secondary">4</div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <hr />
+    <br /><br /><br />
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-danger">1</div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-warning">2</div>
+        <div class="col-sm-12 col-md-4 col-lg-2 bg-info">3</div>
+        <div class="col-sm-12 col-md-6 col-lg-2 bg-secondary">4</div>
+        <div class="col-sm-12 col-md-6 col-lg-2 bg-danger">4</div>
+        <div class="col-sm-12 col-lg-2 bg-info">4</div>
+      </div>
+    </div> -->
+
+    <br /><br /><br />
+    <hr />
+    <br /><br /><br />
+    <h1>Display Example</h1>
+
+    <!--
+        ▸ Sadece xs ekranlarda gözükecek bir element tasarlayınız.
+        ▸ Sadece xs ekranlarda gözükmeyecek bir element tasarlayınız.
+        ▸ Sadece md ekranlarda gözükecek bir element tasarlayınız.
+        ▸ Sadece md ekranlarda gözükmeyecek bir element tasarlayınız.
+        ▸ Sadece md+ ekranlarda gözükecek bir element tasarlayınız. -->
+
+    <div class="container text-center">
+      <div class="bg-danger d-sm-none">sadece XS ekranda görünür</div>
+      <div class="bg-success d-none d-sm-block">XS hariç ekranda görünür</div>
+      <div class="bg-secondary d-none d-md-block d-lg-none">
+        sadece MD ekranda görünür
+      </div>
+      <div class="bg-primary d-sm-block d-md-none d-lg-block">
+        MD hariç ekranda görünür
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
