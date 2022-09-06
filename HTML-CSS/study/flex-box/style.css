@@ -1,0 +1,24 @@
+* {
+  font-size: 1.2rem;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  background-color: fuchsia;
+  display: flex;
+  flex-direction: row; /** default değeri row */
+  flex-wrap: wrap;
+  justify-content: center; /*! hizalama flex start  , flex end , center , space araund , space evenly , space between */
+  align-content: center;
+  gap: 20px 10px;
+}
+.container div {
+  background-color: goldenrod;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+/*    https: //lms.clarusway.com/mod/page/view.php?id=25149
+  54dk; */
