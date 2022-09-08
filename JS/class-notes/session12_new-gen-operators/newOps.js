@@ -180,3 +180,62 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*=======================================================
 //*  SPREAD (...)
 //* ======================================================
+
+//?Spread operatoru ise iterables olan bir elemani değerler haline getirir
+
+//* array concanitaion
+
+const flyingVecihles = ["Aircraft", "Helicopter", "QuadCopter"];
+const automobiles = ["Truck", "Bus", "Car", "SUV"];
+
+// const allVehicles = [flyingVecihles,automobiles]; //* Nested
+const allVehicles = [...flyingVecihles, ...automobiles]; //*spread
+console.log(allVehicles);
+
+//* Example :
+
+const citrus = ["orange", "lime", "lemon"];
+const fruits = ["apple", ...citrus, "banana", "cherry", "pear"];
+console.log(fruits);
+
+//* String spread
+
+let str = "Hello FS12";
+console.log([...str]);
+const charArray = [...str];
+console.log(charArray);
+
+charArray[0] = "X";
+console.log(charArray);
+console.log([...str]);
+
+//* Max() - Dizileri fonksiyonlara açık bir sekilde parametre olarak vermek için kullanılabilir
+console.log(Math.max(1, 3, 4, 5, 2, 1, 10));
+const nums = [1, 3, 4, 5, 2, 1, 10];
+console.log(Math.max(...nums));
+
+//* Array Copy
+const myNumbers = [1, 2, 3];
+const herNumbers = [-1, ...myNumbers, 7];
+const hisNumbers = [...herNumbers];
+hisNumbers.push(101);
+
+console.log(myNumbers);
+console.log(herNumbers);
+console.log(hisNumbers);
+
+//* Object Copy
+
+const myObj = { a: 1, b: 2, c: 3 };
+const herObj = { a: 2, z: 4, k: 3 };
+
+const copiedObj = { ...myObj };
+console.log(copiedObj);
+
+copiedObj.c = "33";
+
+console.log(copiedObj);
+console.log(myObj);
+
+const combinedObj = { ...myObj, ...herObj }; //* iki tane aynı key varsa sonra ekleneni alır. a key'i ikisinde de olamsına rağmen sonradan eklenen olan herObj içindekini ekledi
+console.log(combinedObj);
