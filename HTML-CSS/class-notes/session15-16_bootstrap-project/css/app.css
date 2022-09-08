@@ -1,5 +1,20 @@
-/*! -------------- 1- NAVBAR ---------------- */
+:root {
+  --red: #dc3545;
+}
 
+/*! -------------- 1- NAVBAR ---------------- */
+.navbar {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.nav-link {
+  color: black;
+  transition: color 0.5s;
+}
+.nav-link:hover {
+  color: var(--red);
+}
 /*! ------------- 2- CAROUSEL --------------- */
 
 /*! ------------ 3- ABOUT SECTION ----------- */
@@ -12,6 +27,6 @@
 
 /*! ----------- 6- CONTACT SECTION ------------ */
 
-/** -------------- UP-BUTTON ------------------ */
+/*! -------------- UP-BUTTON ------------------ */
 
 /*! --------------- 7- FOOTER ----------------- */
