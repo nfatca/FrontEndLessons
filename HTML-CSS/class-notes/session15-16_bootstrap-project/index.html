@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
-  <body>
+  <body id="body">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
@@ -147,7 +147,7 @@
     <main class="text-center">
       <section id="about" class="container bg-light p-3">
         <h2 class="display-6 text-danger mb-4">ABOUT US</h2>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center">
           <div class="col-md-6 col-lg">
             <i class="fas fa-globe-americas fa-2x"></i>
             <h4>Online Courses</h4>
@@ -318,15 +318,30 @@
         </div>
       </section>
       <!-- STUDENTS -->
-      <section id="students">
+      <section id="students" class="container bg-light p-3">
         <h2 class="display-6 text-danger">OUR STUDENTS</h2>
+        <div class="row justify-content-center text-center">
+          <div class="col-sm col-md-6">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              deleniti voluptatem, dolorum necessitatibus dignissimos quisquam
+              mollitia aliquid explicabo veritatis quaerat doloribus placeat,
+              ducimus eum provident minus, illo tempora? At, consectetur?
+            </p>
+            <button class="btn btn-danger">Learn More</button>
+          </div>
+          <div class="col-sm col-md-6">
+            <img src="./img/students1.png" width="70%" alt="" />
+          </div>
+        </div>
       </section>
       <!-- COURSES -->
-      <section id="courses">
+      <section id="courses" class="container bg-dark p-3">
+        <h1 class="text-danger p-3">COURSES</h1>
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link active"
+              class="nav-link active me-2 text-white"
               id="pills-home-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-home"
@@ -335,12 +350,12 @@
               aria-controls="pills-home"
               aria-selected="true"
             >
-              Home
+              Full-Stack
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link me-2 text-white"
               id="pills-profile-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-profile"
@@ -349,12 +364,12 @@
               aria-controls="pills-profile"
               aria-selected="false"
             >
-              Profile
+              Data-Science
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link text-white"
               id="pills-contact-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-contact"
@@ -363,22 +378,7 @@
               aria-controls="pills-contact"
               aria-selected="false"
             >
-              Contact
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-disabled-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-disabled"
-              type="button"
-              role="tab"
-              aria-controls="pills-disabled"
-              aria-selected="false"
-              disabled
-            >
-              Disabled
+              DevOps
             </button>
           </li>
         </ul>
@@ -390,7 +390,44 @@
             aria-labelledby="pills-home-tab"
             tabindex="0"
           >
-            ...
+            <div class="row g-3">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/fs1.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/fs2.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/fs3.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/fs4.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -399,7 +436,44 @@
             aria-labelledby="pills-profile-tab"
             tabindex="0"
           >
-            ...
+            <div class="row g-3">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ds1.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ds2.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ds3.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ds4.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -408,28 +482,115 @@
             aria-labelledby="pills-contact-tab"
             tabindex="0"
           >
-            ...
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pills-disabled"
-            role="tabpanel"
-            aria-labelledby="pills-disabled-tab"
-            tabindex="0"
-          >
-            ...
+            <div class="row g-3">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ops1.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ops2.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ops3.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border border-4 border-white">
+                  <img
+                    src="./img/thumbnail/ops4.jpg"
+                    class="card-img-top"
+                    alt="t1"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- CONTACT -->
-      <section id="contact">
+      <section id="contact" class="container bg-light p-3">
+        <h2 class="display-6 text-danger mb-4">CONTACT</h2>
+        <p class="text-start">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          nemo eum in eius consectetur voluptate architecto. Debitis veritatis
+          adipisci porro obcaecati libero. Est atque asperiores aliquid! Alias,
+          consectetur expedita. Cumque!
+        </p>
+        <div class="row">
+          <div class="col-sm-12 col-md">
+            <i class="fa-solid fa-phone fa-2x text-danger"></i>
+            <h5>Telephone</h1>
+            <a href="tel:+905326323029">+905326323029</a>
+          </div>
+          <div class="col-sm-12 col-md">
+            <i class="fa-brands fa-whatsapp fa-2x text-danger"></i>
+            <h5>Whatsapp</h5>
+            <a href="https://wa.me/+905326323029">+905326323029</a>
+          </div>
+          <div class="col-sm-12 col-md">
+            <i class="fa-solid fa-envelope fa-2x text-danger"></i>
+            <h5>E-Mail</h5>
+            <a href="mailto:nfurkanatca@gmail.com">nfurkanatca@gmail.com</a>
+          </div>
+        </div>
+        <form class="mt-4">
+          <div class="row">
+            <div class="col-sm-12 col-md mb-3">
+              <input type="name" class="form-control" id="inputName" placeholder="Enter Name">
+            </div> 
+            <div class="col-sm-12 col-md mb-3">
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter E-Mail">
+          </div>
+          <div class="col-sm-12 col-md-12 mb-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Subject">
+          </div> 
+          <div class="col-sm-12 col-md-12 mb-3">
+            <input type="comment" class="form-control" id="inputComment" placeholder="Enter Your Comment">
+          </div> 
+          </div>
+   
+          <button type="submit" class="btn btn-danger mb-3" style="width:7rem ;">Submit</button>
+       
         <!--*  form -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d100032.79781158161!2d27.009677544624314!3d38.41778870807746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2str!4v1662786288297!5m2!1sen!2str"  width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      </form>
       </section>
       <!-- FOOTER -->
-      <footer id="footer"></footer>
+      <footer id="footer" class="footer bg-dark text-light p-3">
+        <div class="m-4">
+
+          <a href="#" class="fab fa-facebook-f fa-2x pe-2"></a>
+          <a href="#" class="fab fa-youtube fa-2x pe-2"></a>
+          <a href="#" class="fab fa-linkedin fa-2x pe-2"></a>
+          <a href="#" class="fab fa-instagram fa-2x"></a>
+        </div>
+
+
+            <h6 class="pb-3">© 2022 Copyright by Clarusway</h6>
+
+
+      </footer>
     </main>
     <!-- UP-BTN -->
-
+<a  class="up-btn" href="#body">
+  <i class="fas fa-arrow-up"></i>
+</a>
     <!-- SCRIPTS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -439,4 +600,5 @@
 
     <script src="./lib/fslightbox-basic-3.3.1/fslightbox.js"></script>
   </body>
+  
 </html>
