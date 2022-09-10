@@ -1,0 +1,18 @@
+.banner {
+  background-image: url(./img/banner.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width: 98vw; */
+  height: calc(100vh - 60px);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+.banner p {
+  color: #800080;
+}
+.banner-text {
+  position: relative;
+  top: 15%;
+}
