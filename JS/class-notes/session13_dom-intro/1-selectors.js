@@ -75,9 +75,43 @@ console.log("**********");
 
 [...myList].forEach((item) => (item.style.color = "red"));
 
-//* EXAMPLE-4
-//* ------------------------------------------
+//* ========================================
+//*              QUERYSELECTOR()
+//* ========================================
+
+//? 1 queryselector() etiket seçilebilir
+const myLi = document.querySelector("li");
+console.log(myLi.innerText);
+myLi.style.color = "yellowgreen";
+
+//? 2 queryselector() class seçilebilir
+const itemList = document.querySelector(".item-list");
+itemList.style.background = "grey";
+
+//? 3 queryselector() id seçilebilir
+const input = document.querySelector("#input");
+console.log(input.value);
+
+document.querySelector("#button").style.cursor = "pointer";
+
+//? 4 queryselector() ile CSS'deki gibi secim yapılabilir
+
+const itemH2 = document.querySelector(".item-list h2");
+itemH2.style.color = "purple";
+
+const myBtn = document.querySelector("input[type='button']");
+
+console.log(myBtn);
 
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================
+
+const lists = document.querySelectorAll("ul li");
+console.log(lists); //? nodelist
+
+lists.forEach((li) => console.log(li.innerText));
+
+console.log(
+  document.querySelectorAll("section ul li:nth-child(4)")[0].innerText
+);
