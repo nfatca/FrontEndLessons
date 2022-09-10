@@ -16,3 +16,9 @@
   position: relative;
   top: 15%;
 }
+a {
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  color: white;
+}
