@@ -22,3 +22,13 @@ a {
   padding: 0.6rem;
   color: white;
 }
+#company img {
+  width: 10rem;
+}
+
+#contact {
+  background-image: url(./img/map.jpeg);
+}
+#contact input {
+  margin: 1rem;
+}
