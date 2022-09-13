@@ -11,3 +11,18 @@ console.log(newP);
 
 const h2 = document.querySelector(".item-list h2");
 h2.after(newP);
+
+//? getAttribute()
+console.log(newP.getAttribute("class"));
+console.log(newP.getAttribute("id"));
+console.log(newP.getAttribute("name"));
+
+//? classList
+console.log(newP.classList.contains("par")); //? true
+newP.classList.add("new-class");
+console.log(newP);
+newP.classList.remove("new-class");
+
+//? INNER HTML (Ciddi Guvenlik aciklari var)
+const ul = document.querySelector("ul");
+ul.innerHTML += `<li id="list-id" class="list">Boostrap</li>`;
