@@ -17,7 +17,29 @@ body {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   width: 80vw;
   height: 700px;
+  position: relative;
+  overflow: hidden;
 }
 .ground {
-  background-image: url(./img/Img_1.png);
+  height: 150px;
+  width: 5000%;
+  background-image: url(./img/Img_02.png);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  animation: right 5s linear infinite;
+}
+.car {
+  position: absolute;
+  bottom: 55px;
+  left: 30%;
+}
+
+/** Animetion ****/
+
+@keyframes right {
+  100% {
+    transform: translate(-2000px);
+  }
 }
