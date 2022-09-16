@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  background-color: lightcyan;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  animation: dropdown 4s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
+  position: absolute;
+}
+.card button {
+  border: none;
+  padding: 1rem;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 7rem;
+  cursor: pointer;
+}
+
+@keyframes dropdown {
+  0% {
+    top: -50%;
+  }
+
+  20% {
+    top: 40vh;
+  }
+  80% {
+    top: 40vh;
+  }
+  100% {
+    top: -50%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
