@@ -1,0 +1,48 @@
+/*********** ANIMATION INTRO **********/
+
+.outer {
+  background-color: blueviolet;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+.inner {
+  background-color: cadetblue;
+  width: 50%;
+  height: 50%;
+  /* transition: transform 1s ease-in-out, background-color 1s; */
+  /* transition: trasnform 1s cubic-bezier(0.42, 0, 0, 1.44); */
+}
+
+.outer:hover .inner {
+  /* transform: translateX(100%);
+  background-color: chartreuse; */
+
+  animation: travel 1s ease-in-out;
+
+  /* animation-iteration-count: 3; */
+
+  /* animation-direction: alternate; */
+
+  animation-fill-mode: both;
+
+  animation-delay: 1s;
+
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+@keyframes travel {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
