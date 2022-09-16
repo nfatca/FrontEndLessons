@@ -1,5 +1,4 @@
-/************** SHAKE **************/
-
+/******** SHAKE *******/
 div {
   height: 100vh;
   display: flex;
@@ -24,6 +23,7 @@ div i {
 .fa-dollar-sign {
   animation: snake 0.2s ease-in-out infinite alternate forwards;
 }
+
 .fa-dollar-sign:hover {
   animation-play-state: paused;
 }
@@ -42,9 +42,10 @@ div i {
 
 @keyframes snake {
   from {
-    transform: skew(30deg);
+    transform: skew(45deg);
   }
+
   to {
-    transform: skew(-30deg);
+    transform: skew(-45deg);
   }
 }

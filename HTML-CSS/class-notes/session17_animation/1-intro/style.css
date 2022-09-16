@@ -1,4 +1,4 @@
-/*********** ANIMATION INTRO **********/
+/******* ANIMATION INTRO *******/
 
 .outer {
   background-color: blueviolet;
@@ -6,39 +6,68 @@
   height: 500px;
   margin: 0 auto;
 }
+
 .inner {
   background-color: cadetblue;
   width: 50%;
   height: 50%;
   /* transition: transform 1s ease-in-out, background-color 1s; */
-  /* transition: trasnform 1s cubic-bezier(0.42, 0, 0, 1.44); */
+  /* transition: transform 1s cubic-bezier(0.42, 0, 0.65, 1.55); */
 }
 
 .outer:hover .inner {
-  /* transform: translateX(100%);
-  background-color: chartreuse; */
+  /* background-color: chartreuse;
+  transform: translateX(100%); */
+  animation: travel 4s ease-in-out;
 
-  /* animation: travel 1s ease-in-out; */
+  /*! animasyon tekrar adedi */
+  /*! **********************************/
+  /* ? calc() metodu ile degiskenlere gore matematiksel olarak hesaplanabilir */
+  /*? inifinite yapilirsa surekli calisir. Bu sebeple sonsuz
+  /*? olan bir animasyonu hover'a  vermek yerine dogrdudan elemena vermek
+  /*? ve hover'ında  ise animation-play-state: paused ile durdurmak mantikli olabilir.; */
+  /* animation-iteration-count: 4; */
 
-  /* animation-iteration-count: 3; */
-
+  /*! animasyon yonu */
+  /*! **********************************/
+  /*? animsyonun baslangic yonu */
+  /*? normal,  reverse, alternate, alternate-reverse */
   /* animation-direction: alternate; */
 
-  /* animation-fill-mode: both;
+  /*! animasyon doldurma modu */
+  /*! ***********************************/
+  /*? animasyonun, animasyon yonune de bagli olarak hangi keyframe de bitecegini gosterir. */
+  /*?  none, forwards, backwards, both */
 
-  animation-delay: 1s; */
+  animation-fill-mode: backwards; /** animasyon ilk keyframe'de biter*/
+  animation-fill-mode: forwards; /** animasyon son keyframe'de biter*/
 
+  /*! animasyon gecikmesi */
+  /*! ***********************************/
+  /*? animasyon icin baslamasi gecikmesini belirler */
+  /*? Negatif gecikme baslama gecikmesi olarak degil
+  /*? ilgili suredeki keyframe'lerin atlanilmasini saglar */
+  animation-delay: 1s;
+  /* animation-delay: -2s; */
+
+  /*! Kisa yol tanimlamasi
+  /*! ***********************************/
   animation: travel 2s ease-in-out 0.5s 2 alternate forwards;
 }
 
+/*?  Keyframe: animasyon noktalarinin ve zamanlarinin tanimlanmasini saglar
+/*?  % olarak ve from - to seklinde kullanilabilir.*/
 @keyframes travel {
+  /*! baslangic konumu */
   0% {
     transform: translateX(0);
   }
+  /*! baslangica gore 100 birim asagisi */
   33% {
     transform: translateY(100%);
   }
   66% {
+    /*! baslangica gore 100 birim asagisi */
     transform: translate(100%, 100%);
   }
   100% {
