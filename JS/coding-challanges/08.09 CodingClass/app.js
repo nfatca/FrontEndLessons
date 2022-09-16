@@ -136,6 +136,9 @@ const twoPair = (str) => {
   let pair = "";
   let result = [];
   str.length % 2 != 0 && arr.push("_");
+  //   if (str.length % 2 != 0){
+  //     arr.push("_");
+  // }
   for (let i = 0; i < arr.length; i += 2) {
     pair = arr[i] + arr[i + 1];
     result.push(pair);
