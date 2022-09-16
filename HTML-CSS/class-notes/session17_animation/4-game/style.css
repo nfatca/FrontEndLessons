@@ -34,6 +34,7 @@ body {
   position: absolute;
   bottom: 55px;
   left: 30%;
+  animation: pop-up 0.8s linear infinite;
 }
 
 /** Animetion ****/
@@ -41,5 +42,17 @@ body {
 @keyframes right {
   100% {
     transform: translate(-2000px);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(1px);
   }
 }
