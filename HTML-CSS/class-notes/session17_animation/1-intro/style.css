@@ -18,18 +18,17 @@
   /* transform: translateX(100%);
   background-color: chartreuse; */
 
-  animation: travel 1s ease-in-out;
+  /* animation: travel 1s ease-in-out; */
 
   /* animation-iteration-count: 3; */
 
   /* animation-direction: alternate; */
 
-  animation-fill-mode: both;
+  /* animation-fill-mode: both;
 
-  animation-delay: 1s;
+  animation-delay: 1s; */
 
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
+  animation: travel 2s ease-in-out 0.5s 2 alternate forwards;
 }
 
 @keyframes travel {
