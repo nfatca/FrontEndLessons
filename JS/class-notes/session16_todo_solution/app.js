@@ -96,6 +96,13 @@ todoUl.addEventListener("click", (e) => {
     //? ilgili li elementinde checked adinda bir class'i varsa bunu sil
     //?  aksi takdirde ekle (DOM)
     e.target.parentElement.classList.toggle("checked");
+    // todos.forEach((todo) => {
+    //   if (todo.id == Number(id) && todo.classList.contains("checked")) {
+    //     todo.classList.remove("checked");
+    //   } else {
+    //     todo.classList.add("checked");
+    //   }
+    // });
   }
 });
 
