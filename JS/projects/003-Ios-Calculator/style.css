@@ -24,6 +24,22 @@
   /* border: 2px solid red; */
   grid-area: 1 / 1 / 4 / 5;
 }
+.screen {
+  text-align: right;
+  position: relative;
+  top: 75px;
+  right: 10px;
+  color: white;
+}
+.total {
+  text-align: right;
+  position: relative;
+  top: 85px;
+  right: 10px;
+  color: rgb(151, 151, 151);
+  font-size: 1.2rem;
+}
+
 .buttons {
   /* background-color: lightblue;
   border: 1px solid red; */
@@ -35,6 +51,9 @@
 }
 .buttons:hover {
   opacity: 0.5;
+}
+.buttons:active {
+  transform: scale(95%);
 }
 .button1 {
   grid-area: 4 / 1 / 5 / 2;
