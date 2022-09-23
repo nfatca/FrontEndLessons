@@ -1,0 +1,22 @@
+.container {
+  width: 400px;
+  height: 200px;
+  background-color: teal;
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  color: white;
+}
+.link,
+.link:visited {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.link:hover {
+  color: #333;
+}
+.yazi {
+  font-size: 2rem;
+}
