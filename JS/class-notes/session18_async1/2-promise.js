@@ -33,14 +33,12 @@
 console.log("Promise");
 
 const myPromise = new Promise((resolve, reject) => {
-  const succes = Math.floor(Math.random() * 2);
+  const success = Math.floor(Math.random() * 2);
   const data = { a: 1, b: 2 };
-  if (succes) resolve(data);
-  else reject(new Error("Fetch halted"));
+  if (success) {
+    console.log("Data Fetched");
+    resolve(data);
+  } else reject(new Error("Fetch Halted"));
 });
 
-myPromise
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((err) => console.log(err));
+myPromise.then((res) => console.log(res)).catch((err) => console.log(err));

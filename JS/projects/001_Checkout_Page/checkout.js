@@ -32,8 +32,10 @@ productsDiv.addEventListener("click", (e) => {
         )
       ) {
         //* remove
-        e.target.parentElement.parentElement.parentElement.remove();
-        calculateCardPrice(e.target);
+        // e.target.parentElement.parentElement.parentElement.remove();
+        //! closet() ile kısa yoldan secim yapilabilir
+        e.target.closet("product").remove();
+        calculateCardPrice();
       }
     }
   } else if (e.target.classList.contains("fa-plus")) {
