@@ -1,125 +1,101 @@
-let temp = 0;
-let value1 = 0;
-let value2 = 0;
+const input = document.querySelector(".input");
+const input2 = document.querySelector(".input2");
+const btnContainer = document.querySelector(".button-container");
+
+let num1;
+let num2;
 let operator;
+let num1done = false;
+let floating = false;
 
-const input = document.querySelector(".container");
-
-input.addEventListener("click", (e) => {
-  if (e.target.className == "buttons button13") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button14") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button15") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button9") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button10") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button11") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button5") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button6") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button7") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button17") {
-    console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button1") {
-    console.log(e.target.innerText);
-    // calculateScreen(e);
-  } else if (e.target.className == "buttons button2") {
-    console.log(e.target.innerText);
-    // calculateScreen(e);
-  } else if (e.target.className == "buttons button3") {
-    console.log(e.target.innerText);
-    // calculateScreen(e);
-  } else if (e.target.className == "buttons button4 operator divide") {
-    // console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button8 operator multiply") {
-    // console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button12 operator minus") {
-    // console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button16 operator plus") {
-    // console.log(e.target.innerText);
-    calculate(e);
-  } else if (e.target.className == "buttons button18") {
-    console.log(e.target.innerText);
-    calculateScreen(e);
-  } else if (e.target.className == "buttons button19 end") {
-    console.log(e.target.innerText);
-    calculateScreen(e);
-    calculate(e);
-  }
-});
-
-//! screen
-const calculateScreen = (item) => {
-  // if (temp == 0) {
-  //   value1 = item.target.innerText;
-  //   // temp = value1;
-  //   document.querySelector(".screen").innerText += value1 + " ";
-  // } else {
-  //   value2 = item.target.innerText;
-  //   document.querySelector(".screen").innerText += value2 + " ";
-  // }
-  console.log(`temp = ${temp}`);
-};
-
-//! calculate
-
-const calculate = (item) => {
-  if (item.target.className == "buttons button16 operator plus") {
-    temp = value1;
-    operator = "+";
-    // console.log("plus");
-    // console.log(operator);
-  } else if (item.target.className == "buttons button12 operator minus") {
-    operator = "-";
-    // console.log("minus");
-  } else if (item.target.className == "buttons button8 operator multiply") {
-    operator = "*";
-    // console.log("multiply");
-  } else if (item.target.className == "buttons button4 operator divide") {
-    operator = "/";
-    // console.log("divide");
-  } else if (item.target.className == "buttons button1") {
-    console.log("end");
-  } else if (item.target.className == "buttons button2") {
-    console.log("end");
-  } else if (item.target.className == "buttons button3") {
-    console.log("end");
-  } else {
-    if (temp == 0) {
-      value1 += item.target.innerText;
-      // temp = value1;
-      document.querySelector(".screen").innerText += value1 + " ";
+btnContainer.addEventListener("click", (e) => {
+  if (e.target.id == "n0") {
+    if (input.innerText == ``) {
+      input.innerText = 0;
+    } else if (input.innerText == `0`) {
     } else {
-      value2 = item.target.innerText;
-      document.querySelector(".screen").innerText += value2 + " ";
+      input.innerText += 0;
+    }
+  } else if (e.target.id == "n1") {
+    input.innerText += 1;
+  } else if (e.target.id == "n2") {
+    input.innerText += 2;
+  } else if (e.target.id == "n3") {
+    input.innerText += 3;
+  } else if (e.target.id == "n4") {
+    input.innerText += 4;
+  } else if (e.target.id == "n5") {
+    input.innerText += 5;
+  } else if (e.target.id == "n6") {
+    input.innerText += 6;
+  } else if (e.target.id == "n7") {
+    input.innerText += 7;
+  } else if (e.target.id == "n8") {
+    input.innerText += 8;
+  } else if (e.target.id == "n9") {
+    input.innerText += 9;
+  } else if (e.target.id == "division" && !num1done && input.innerText) {
+    input2.innerText += input.innerText + "÷";
+    num1 = Number(input.innerText);
+    operator = e.target.id;
+    input.innerText = "";
+    num1done = true;
+    floating = false;
+  } else if (e.target.id == "multi" && !num1done && input.innerText) {
+    input2.innerText += input.innerText + "*";
+    num1 = Number(input.innerText);
+    operator = e.target.id;
+    input.innerText = "";
+    num1done = true;
+    floating = false;
+  } else if (e.target.id == "sub" && !num1done && input.innerText) {
+    input2.innerText += input.innerText + "-";
+    num1 = Number(input.innerText);
+    operator = e.target.id;
+    input.innerText = "";
+    num1done = true;
+    floating = false;
+  } else if (e.target.id == "add" && !num1done && input.innerText) {
+    input2.innerText += input.innerText + "+";
+    num1 = Number(input.innerText);
+    operator = e.target.id;
+    input.innerText = "";
+    num1done = true;
+    floating = false;
+  } else if (e.target.id == "dec" && !floating) {
+    input.innerText += e.target.innerText;
+    floating = true;
+  } else if (e.target.id == "per" && input.innerText) {
+    input.innerText = Number(input.innerText) / 100;
+  } else if (e.target.id == "pm" && input.innerText) {
+    if (input.innerText.includes("-")) {
+      input.innerText = input.innerText.replace("-", "");
+    } else {
+      input.innerText = "-" + input.innerText;
+    }
+  } else if (e.target.id == "ac") {
+    input.innerText = "";
+    input2.innerText = "";
+    num1done = false;
+    floating = false;
+  } else if ((e.target.id = "equal" && num1done && input.innerText)) {
+    num2 = Number(input.innerText);
+    num1done = false;
+    floating = false;
+    input2.innerText = "";
+    switch (operator) {
+      case "division":
+        input.innerText = num1 / num2;
+        break;
+      case "add":
+        input.innerText = num1 + num2;
+        break;
+      case "sub":
+        input.innerText = num1 - num2;
+        break;
+      case "multi":
+        input.innerText = num1 * num2;
+        break;
     }
   }
-
-  const value = item.target.innerText;
-  temp = value;
-  // document.querySelector(".total").innerText = temp;
-};
-
-window.addEventListener("load", () => {
-  document.querySelector(".screen").innerText = "";
-  // document.querySelector(".total").innerText = "";
 });
