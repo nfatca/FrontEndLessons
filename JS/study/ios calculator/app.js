@@ -65,6 +65,19 @@ btnContainer.addEventListener("click", (e) => {
   } else if (e.target.id == "dec" && !floating) {
     input.innerText += e.target.innerText;
     floating = true;
+  } else if (e.target.id == "per" && input.innerText) {
+    input.innerText = Number(input.innerText) / 100;
+  } else if (e.target.id == "pm" && input.innerText) {
+    if (input.innerText.includes("-")) {
+      input.innerText = input.innerText.replace("-", "");
+    } else {
+      input.innerText = "-" + input.innerText;
+    }
+  } else if (e.target.id == "ac") {
+    input.innerText = "";
+    input2.innerText = "";
+    num1done = false;
+    floating = false;
   } else if ((e.target.id = "equal" && num1done && input.innerText)) {
     num2 = Number(input.innerText);
     num1done = false;
@@ -83,14 +96,6 @@ btnContainer.addEventListener("click", (e) => {
       case "multi":
         input.innerText = num1 * num2;
         break;
-    }
-  } else if (e.target.id == "per" && input.innerText) {
-    input.innerText = Number(input.innerText) / 100;
-  } else if (e.target.id == "pm" && input.innerText) {
-    if (input.innerText.includes("-")) {
-      input.innerText = input.innerText.replace("-", "");
-    } else {
-      input.innerText = "-" + input.innerText;
     }
   }
 });
