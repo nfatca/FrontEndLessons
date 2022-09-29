@@ -1,3 +1,11 @@
+//* ======================================================
+//*        OOP -  Polymorphism(ES6)
+//* ======================================================
+
+//* Polymorphism, bir degisken, fonksiyon veya nesnenin çoklu sekiller
+//* alabilmesini tanimlayan bir nesne-yonelimli programlama teknigidir.
+//* Polymorphism, genellikle Overloading ve Overriding gibi alt kavramlar
+//* ile bilinir.
 class Book {
   constructor(title, author, year) {
     this.author = author;
@@ -33,7 +41,7 @@ class Magazine extends Book {
   getSummary() {
     return `${this.title} was writtten by ${this.author} in ${this.year} in ${this.month}`;
   }
-  //! Override edilmis bir parent fonksiyonunu kullanmak için super keyword'u
+  //! Override edilmis bir parent fonksiyonunu kullanmak için super keyword'u kullanilabilr.
 
   getSummaryParent() {
     return super.getSummary();
