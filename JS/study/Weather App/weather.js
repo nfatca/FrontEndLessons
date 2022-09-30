@@ -26,10 +26,12 @@ const getWeatherDataFromApi = async () => {
   const units = "metric";
   const lang = "tr";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${tokenKey}&units=${units}&lang=${lang}`;
+  let response = {};
   try {
-    const response = await fetch(url).then((response) => response.json());
-    //   console.log(response);
-    const { main, sys, weather, name } = response;
+    // response = await fetch(url).then((response) => response.json());
+    response = await axios(url);
+    console.log(response);
+    const { main, sys, weather, name } = response.data;
 
     const iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
     const iconUrlAWS = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0].icon}.svg`;
@@ -49,7 +51,7 @@ const getWeatherDataFromApi = async () => {
         return;
       }
     }
-    console.log(cityNameSpansArray);
+    // console.log(cityNameSpansArray);
     const createdLi = document.createElement("li");
     createdLi.classList.add("city");
     createdLi.innerHTML = `<h2 class="city-name" data-name="${name}, ${
@@ -64,15 +66,45 @@ const getWeatherDataFromApi = async () => {
   <figcaption>${weather[0].description}</figcaption>
 </figure>`;
 
-    //* append vs prepend
+    //* append(sona ekler) vs prepend(başa ekler)
     //   list.append(createdLi);
     list.prepend(createdLi);
-    form.reset();
+
+    //* capturing
+    // createdLi.addEventListener("click", (event) => {
+    //   if (event.target.tagName == "IMG") {
+    //     event.target.src = event.target.src == iconUrl ? iconUrlAWS : iconUrl;
+    //   }
+    // });
+    //* Bubling
+    // createdLi.addEventListener("click", (e) => {
+    //   alert(`${e.target.tagName} element is clicked`);
+    //   window.location.href = "https://clarusway.com";
+    // });
+    // createdLi.querySelector("figure").addEventListener("click", (e) => {
+    //   alert(`FIGURE element is clicked`);
+    //   //! stop bubling
+    //     e.stopPropagation();
+    //     window.location.href = "https://clarusway.com";
+    // });
+    // createdLi.querySelector("img").addEventListener("click", (e) => {
+    //   alert(`IMG element is clicked`);
+    //     window.location.href = "https://clarusway.com";
+    // });
+
+    // form.reset();
   } catch (error) {
-    msg.innerText = `404 City Not Found`;
+    // msg.innerText = `404 City Not Found`;
+    msg.innerText = response.message;
     setTimeout(() => {
       msg.innerText = "";
     }, 5000);
-    form.reset();
   }
+  form.reset();
 };
+//* window onload
+// document.querySelector(".cities").addEventListener("click", (e) => {
+//   if (e.target.tagName == "IMG") {
+//     alert("img is clicked");
+//   }
+// });
