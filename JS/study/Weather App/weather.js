@@ -71,11 +71,11 @@ const getWeatherDataFromApi = async () => {
     list.prepend(createdLi);
 
     //* capturing
-    // createdLi.addEventListener("click", (event) => {
-    //   if (event.target.tagName == "IMG") {
-    //     event.target.src = event.target.src == iconUrl ? iconUrlAWS : iconUrl;
-    //   }
-    // });
+    createdLi.addEventListener("click", (e) => {
+      if (e.target.tagName == "IMG") {
+        e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
+      }
+    });
     //* Bubling
     // createdLi.addEventListener("click", (e) => {
     //   alert(`${e.target.tagName} element is clicked`);
