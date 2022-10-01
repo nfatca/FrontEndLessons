@@ -31,7 +31,6 @@ User story;
 
 🔥 You can use [OpenWeather Api](https://openweathermap.org/) for your app. 
 
-🔥 You don’t need to create a new template for this project, you can use this repository template for html and css. We will be concerned in javascript side.
 
 
 <p align="center"> ✍ Happy Coding ⌛ <p>
