@@ -68,3 +68,27 @@ body {
   border-radius: 50px;
   transform: translateX(-50%);
 }
+
+.digiClock {
+  /* height: 100%;
+  width: 100%; */
+  /* background-color: antiquewhite; */
+  /* height: 10%;
+  width: 10%; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* line-height: 98.5vh; */
+  font-size: 5rem;
+  /* border: 2px red solid; */
+  margin-top: 50rem;
+
+  /* background-color: aqua; */
+}
+#minutes,
+#midnight {
+  color: red;
+}
+#midnight {
+  font-size: 3rem;
+}
