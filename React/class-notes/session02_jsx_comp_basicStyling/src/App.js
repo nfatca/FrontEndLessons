@@ -1,9 +1,10 @@
 import React from "react";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 //? React,JSX kullanmaktadir.
 //? JSX'de, HTMl elementleri dogrudan JS icerisinde kullanilabilir
-
-import Header from "./components/header";
 
 //! Componentler, HTML,CSS ve JS kodlarindan meydana gelmiş
 //! bir kod parcacigidir.
@@ -16,9 +17,17 @@ import Header from "./components/header";
 //! dondurmelidir.container icin div, article, header, <> v.b
 //! herhangi bir element kullanilabilir.
 
-//? App componentinin tanimlanmasi
+//? App componentinin function declaration ile tanimlanmasi
 function App() {
-  return <Header />;
+  return (
+    //* JSX
+    //? stillendirme yapilmayacaksa container icin <> kullanilabilir
+    <>
+      <Header />
+      <Content />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
