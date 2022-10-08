@@ -19,12 +19,12 @@ const fibonacci = (num = 1) => {
 };
 
 // ! node module export
-// module.exports = {
-//     calculateTotal,
-//     celsiusToFahrenheit,
-//     fahrenheitToCelsius,
-//     fibonacci,
-//   };
+module.exports = {
+  calculateTotal,
+  celsiusToFahrenheit,
+  fahrenheitToCelsius,
+  fibonacci,
+};
 
 //! esm module export
 // export { calculateTotal,
