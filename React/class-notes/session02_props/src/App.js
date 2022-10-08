@@ -1,9 +1,19 @@
 import React from "react";
+// import Msg from "./compenents/Msg";
+import Person from "./compenents/Person";
+import data from "./data";
 
 function App() {
   return (
     <div>
-      <h1>PROPS</h1>
+      {data.map((person) => (
+        <Person
+          key={person.name}
+          name={person.name}
+          img={person.img}
+          tel={person.tel}
+        />
+      ))}
     </div>
   );
 }
