@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/mixing";
 
 .Navbar {
   background-color: $cardNavBgColor;
@@ -13,5 +14,17 @@
       background-color: $backgroundColor;
       color: $cardNavBgColor;
     }
+  }
+}
+
+@include media-xsm {
+  .Navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@include media-sm {
+  .Navbar {
+    flex-direction: row;
   }
 }

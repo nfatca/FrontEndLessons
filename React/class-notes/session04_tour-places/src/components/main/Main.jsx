@@ -1,9 +1,13 @@
 import "./Main.scss";
-
+import Data from "../../helper/Data";
+import Card from "./Card";
 const Main = () => {
+  // console.log(Data);
   return (
-    <div className="main">
-      <h1>Main</h1>
+    <div className="card-container">
+      {Data.map((item, index) => (
+        <Card {...item} key={index} />
+      ))}
     </div>
   );
 };
