@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FrontEndLessons/React/projects/001-tour-places/static/css/main.c22e897b.css",
-    "main.js": "/FrontEndLessons/React/projects/001-tour-places/static/js/main.cf785b40.js",
-    "static/js/787.191d0d07.chunk.js": "/FrontEndLessons/React/projects/001-tour-places/static/js/787.191d0d07.chunk.js",
-    "index.html": "/FrontEndLessons/React/projects/001-tour-places/index.html",
-    "main.c22e897b.css.map": "/FrontEndLessons/React/projects/001-tour-places/static/css/main.c22e897b.css.map",
-    "main.cf785b40.js.map": "/FrontEndLessons/React/projects/001-tour-places/static/js/main.cf785b40.js.map",
-    "787.191d0d07.chunk.js.map": "/FrontEndLessons/React/projects/001-tour-places/static/js/787.191d0d07.chunk.js.map"
+    "main.css": "/FrontEndLessons//React/class-notes/session04_tour-places/static/css/main.f47df01f.css",
+    "main.js": "/FrontEndLessons//React/class-notes/session04_tour-places/static/js/main.09f4ae8e.js",
+    "static/js/787.54a85ef9.chunk.js": "/FrontEndLessons//React/class-notes/session04_tour-places/static/js/787.54a85ef9.chunk.js",
+    "index.html": "/FrontEndLessons//React/class-notes/session04_tour-places/index.html",
+    "main.f47df01f.css.map": "/FrontEndLessons//React/class-notes/session04_tour-places/static/css/main.f47df01f.css.map",
+    "main.09f4ae8e.js.map": "/FrontEndLessons//React/class-notes/session04_tour-places/static/js/main.09f4ae8e.js.map",
+    "787.54a85ef9.chunk.js.map": "/FrontEndLessons//React/class-notes/session04_tour-places/static/js/787.54a85ef9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c22e897b.css",
-    "static/js/main.cf785b40.js"
+    "static/css/main.f47df01f.css",
+    "static/js/main.09f4ae8e.js"
   ]
 }
