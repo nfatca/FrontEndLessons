@@ -5,9 +5,20 @@ p {
 .card2 {
   overflow: auto;
 }
+.card {
+  background-color: black;
+  padding: 2rem 1rem;
+}
+.card-title {
+  color: white;
+}
+.card-text {
+  color: white;
+}
 .card1 {
   border-radius: 100px;
 }
+
 .card1:hover p {
   display: block;
 }
