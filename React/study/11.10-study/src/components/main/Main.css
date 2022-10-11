@@ -1,0 +1,20 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.container h1 {
+  color: red;
+  margin-bottom: 30px;
+}
+.container img {
+  width: 50%;
+  box-shadow: 7px 7px 8px gray, -7px -7px 8px gray;
+  border-radius: 10px;
+}
+/* .container img:hover {
+} */
+.container p {
+  margin: 30px;
+  font-size: 22px;
+}

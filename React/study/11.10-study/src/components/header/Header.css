@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  background-color: rgba(255, 228, 196, 0.705);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 7px 7px 8px gray;
+  position: sticky;
+  top: 0;
+}
+
+.header img {
+  width: 50%;
+}
