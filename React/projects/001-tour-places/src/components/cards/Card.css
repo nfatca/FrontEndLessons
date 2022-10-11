@@ -1,0 +1,22 @@
+p {
+  display: none;
+  height: 90px;
+}
+.card2 {
+  overflow: auto;
+}
+.card1 {
+  border-radius: 100px;
+}
+.card1:hover p {
+  display: block;
+}
+img {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+  width: 200px;
+  height: 300px;
+}
+img:hover {
+  filter: grayscale(0%);
+}

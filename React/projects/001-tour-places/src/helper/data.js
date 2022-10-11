@@ -1,4 +1,4 @@
-const data = [
+const Data = [
   {
     photographer: "Lucía Montenegro",
     src: {
@@ -253,4 +253,4 @@ const data = [
   },
 ];
 
-export default data;
+export default Data;

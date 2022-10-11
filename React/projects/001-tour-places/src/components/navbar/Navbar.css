@@ -1,0 +1,22 @@
+.navbar {
+  height: 8vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+a {
+  height: 4.7vh;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  color: white;
+  padding: 15px;
+}
+
+a:hover {
+  background-color: aqua;
+  color: black;
+}
