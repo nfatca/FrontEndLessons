@@ -1,0 +1,81 @@
+.ul_list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.ul_list li {
+  margin: 1rem;
+}
+
+.ul_list a {
+  text-decoration: none;
+  color: white;
+  /* background-color: red; */
+  padding: 1rem 3rem;
+  /* transition: all 0.3s; */
+}
+
+.ul_list a:hover {
+  background-color: antiquewhite;
+  border-radius: 1px;
+  color: black;
+}
+
+.fbImg {
+  width: 70px;
+  margin: 0 1.2rem;
+}
+
+.abc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: white;
+  animation: color-wave 5s infinite;
+}
+
+@keyframes color-wave {
+  0% {
+    color: yellow;
+  }
+  25% {
+    color: white;
+    transition: all 0.1s;
+    transform: scale(1.1);
+  }
+  50% {
+    transition: all 0.1s;
+    transform: scale(1.1);
+  }
+  75% {
+    color: forestgreen;
+    transition: all 0.1s;
+    transform: scale(1.1);
+  }
+  100% {
+    color: yellow;
+  }
+}
+.container_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 7px 7px 8px gray;
+  background: rgb(17, 4, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 4, 247, 1),
+    rgba(9, 9, 121, 1),
+    rgba(228, 255, 0, 1)
+  );
+  color: white;
+  padding: 2rem 2rem 0 2rem;
+}

@@ -1,0 +1,6 @@
+.container_main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  /* gap: 1rem; */
+}
