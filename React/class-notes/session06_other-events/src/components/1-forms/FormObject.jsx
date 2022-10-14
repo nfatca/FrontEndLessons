@@ -1,9 +1,13 @@
 import { useState } from "react";
 
 const FormObject = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formValues, setFormValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const { username, email, password } = formValues;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,14 +16,17 @@ const FormObject = () => {
     email:${email},
     password:${password}
     `);
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    setFormValues({
+      username: "",
+      email: "",
+      password: "",
+    });
   };
 
-  const handleUsername = (e) => {
-    console.log(e.target.value);
-    setUsername(e.target.value);
+  const handleForm = (e) => {
+    // console.log(e.target.value);
+    // console.log(e.target.id);
+    setFormValues({ ...formValues, [e.target.id]: e.target.value });
   };
 
   return (
@@ -28,14 +35,14 @@ const FormObject = () => {
         <h1 className="display-5 text-danger">FORM OBJECT</h1>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
-            Username: <span>{username}</span>
+            Username: <span>{formValues.username}</span>
           </label>
           <input
             type="text"
             className="form-control"
             id="username"
             value={username}
-            onChange={handleUsername}
+            onChange={handleForm}
           />
         </div>
         <div className="mb-3">
@@ -47,7 +54,7 @@ const FormObject = () => {
             className="form-control"
             id="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleForm}
           />
         </div>
         <div className="mb-3">
@@ -59,7 +66,7 @@ const FormObject = () => {
             className="form-control"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleForm}
           />
         </div>
 
