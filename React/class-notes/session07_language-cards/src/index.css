@@ -8,3 +8,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
 }
+
+/*! Language Component Styling   */
+/*********************************/
+
+.lang-card:hover {
+  box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.5);
+}
+.lang-logo {
+  transition: transform 0.2s;
+}
+
+.lang-card:hover .lang-logo {
+  transform: scale(1.2);
+}

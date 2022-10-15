@@ -10,19 +10,22 @@ const Language = ({ lang }) => {
   return (
     <Container
       style={{ background: "peachpuff" }}
-      className="p-4 rounded-2"
+      className="p-4 rounded-2 h-100 lang-card"
       onClick={() => setShowDesc(!showDesc)}
     >
-      <div>
-        <Image src={img} width="70%"></Image>
-        <h3 className="display-6">{name}</h3>
-      </div>
-
-      <ol>
-        {options.map((item) => {
-          return <li className="h5 text-start">{item}</li>;
-        })}
-      </ol>
+      {!showDesc && (
+        <Container className="lang-logo">
+          <Image src={img} width="70%"></Image>
+          <h3 className="display-6">{name}</h3>
+        </Container>
+      )}
+      {showDesc && (
+        <ol className="h-100 d-flex flex-column justify-content-center">
+          {options.map((item) => {
+            return <li className="h5 text-start">{item}</li>;
+          })}
+        </ol>
+      )}
     </Container>
   );
 };
