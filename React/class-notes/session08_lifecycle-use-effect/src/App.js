@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LifeCycleMethods from "./components/LifeCycleMethods";
-// import UseEffectHook from "./components/UseEffectHook";
+import UseEffectHook from "./components/UseEffectHook";
 // import User from "./components/User";
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
       </button>
 
       {/* Short Circuit */}
-      {show && <LifeCycleMethods />}
+      {/* {show && <LifeCycleMethods />} */}
 
-      {/* {show && <UseEffectHook />} */}
+      {show && <UseEffectHook />}
       {/* <User /> */}
       {/* <LifeCycleMethods /> */}
     </div>
