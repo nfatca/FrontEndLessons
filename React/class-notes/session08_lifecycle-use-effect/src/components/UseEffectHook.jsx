@@ -35,19 +35,36 @@ const UseEffectHook = () => {
 
   //? componentDidMount
   //! fetch, asyn-await, localStorage, setTimeout, setInterval();
-  //   useEffect(() => {
-  //     console.log("Mounting");
-  //     setTimeout(() => {
-  //       alert("Data Fetched");
-  //     }, 3000);
-  //   }, []);
+  // useEffect(() => {
+  //   console.log("Mounting");
+  //   setTimeout(() => {
+  //     alert("Data Fetched");
+  //   }, 3000);
+  // }, [count]);
 
   //? ComponentDidMount + componentDidUpdate code */
+  // useEffect(() => {
+  //   console.log("Mounting + Updating");
+  //   setTimeout(() => {
+  //     alert("Data Fetched");
+  //   }, 1000);
+  // }, [count]);
+
+  //? ComponentDidUnmount
+
+  const fetchData = () => {
+    console.log("Data Fetched");
+  };
+
   useEffect(() => {
-    console.log("Mounting + Updating");
-    setTimeout(() => {
-      alert("Data Fetched");
-    }, 1000);
+    //!CompenentDidMount
+    const timerId = setInterval(fetchData, 1000);
+
+    return () => {
+      //! componentWillUnmount
+      clearInterval(timerId);
+      console.log("Unmounting");
+    };
   }, [count]);
 
   console.log("Rendering");
