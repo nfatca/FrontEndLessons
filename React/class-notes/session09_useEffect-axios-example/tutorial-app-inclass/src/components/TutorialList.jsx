@@ -2,22 +2,10 @@ import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
 import EditTutorial from "./EditTutorial";
-
-//! test data
-// const tutorials = [
-//   {
-//     id: 1,
-//     title: "JS",
-//     description: "JS is a programming language",
-//   },
-//   {
-//     id: 2,
-//     title: "React",
-//     description: "JS library for UI design",
-//   },
-// ];
+import { useState } from "react";
 
 const TutorialList = ({ tutor, getTutorials }) => {
+  const [newItem, setNewItem] = useState([]);
   //! Delete (CRUD-Delete)
   const deleteTutorial = async (id) => {
     const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
@@ -31,9 +19,8 @@ const TutorialList = ({ tutor, getTutorials }) => {
 
   //! Put (CRUD-Update)
   //! Put : Whole Update, Patch: Partially Uptade
-  const editTutorial = async (item) => {
-    const { id, title, description } = item;
-
+  const editTutorial = async (id, title, description) => {
+    // const { id, title, description } = item;
     const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
     try {
       await axios.put(`${url}/${id}`, { title, description });
@@ -71,13 +58,7 @@ const TutorialList = ({ tutor, getTutorials }) => {
                     data-bs-toggle="modal"
                     data-bs-target="#edit-modal"
                     className="me-2 text-warning"
-                    onClick={() =>
-                      editTutorial({
-                        id: "1943",
-                        title: "update",
-                        description: "update",
-                      })
-                    }
+                    onClick={() => setNewItem(item)}
                   />
                   <AiFillDelete
                     size={22}
@@ -91,7 +72,7 @@ const TutorialList = ({ tutor, getTutorials }) => {
           })}
         </tbody>
       </table>
-      <EditTutorial />
+      <EditTutorial item={newItem} editTutorial={editTutorial} />
     </div>
   );
 };
