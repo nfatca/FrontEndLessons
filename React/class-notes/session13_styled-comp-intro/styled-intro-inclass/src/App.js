@@ -13,9 +13,12 @@ const App = () => {
         <TomatoButton>Send</TomatoButton>
         <TomatoButton primary>Submit</TomatoButton>
       </Container>
-      <Container>
+      <Container bg="#eee">
         <StyledLink href="#" target="_blank">
           Link
+        </StyledLink>
+        <StyledLink secondary href="#" target="_blank">
+          Link2
         </StyledLink>
       </Container>
     </>
