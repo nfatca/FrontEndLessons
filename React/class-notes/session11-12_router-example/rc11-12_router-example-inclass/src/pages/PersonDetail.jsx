@@ -1,15 +1,11 @@
-import {
-  useParams,
-  useLocation,
-  useNavigate,
-  useState,
-  useEffect,
-} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+// import NotFound from "./NotFound";
 
 const PersonDetail = () => {
   const navigate = useNavigate();
 
-  // const { id } = useParams();
+  const { id } = useParams();
   // console.log(id);
 
   // const { state: person } = useLocation();
