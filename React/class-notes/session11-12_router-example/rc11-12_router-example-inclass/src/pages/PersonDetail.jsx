@@ -16,22 +16,35 @@ const PersonDetail = () => {
 
   const [person, setPerson] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://reqres.in/api/users/${id}`)
       .then((res) => {
         if (!res.ok) {
-          setError(true);
+          setError(false);
+          setLoading(false);
           throw new Error("Something went wrong");
         }
         return res.json();
       })
-      .then((data) => setPerson(data.data))
+      .then((data) => {
+        setPerson(data.data);
+        setLoading(false);
+      })
       .catch((err) => console.log(err));
   }, []);
   if (error) {
     return <NotFound />;
-  } else {
+  }
+  if (loading) {
+    return (
+      <div className="text-center">
+        <h3>Data Loading</h3>
+      </div>
+    );
+  }
+  if (!error && !loading) {
     return (
       <div className="container text-center">
         <h3>
