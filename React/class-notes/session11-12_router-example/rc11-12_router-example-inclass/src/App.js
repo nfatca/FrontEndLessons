@@ -4,7 +4,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Paths from "./pages/Paths";
 import PersonDetail from "./pages/PersonDetail";
 import FullStack from "./pages/FullStack";
@@ -35,7 +35,8 @@ function App() {
 
         {/* nested route */}
         <Route path="/paths" element={<Paths />}>
-          <Route path="fullstack" element={<FullStack />} />
+          <Route index element={<FullStack />} />
+          {/* <Route path="fullstack" element={<FullStack />} /> */}
           <Route path="aws" element={<Aws />} />
         </Route>
 
@@ -43,7 +44,7 @@ function App() {
         {/* <Route path="*" element={<NotFound />} /> */}
 
         {/* Redirect islemleri icin Navigate componenti kullanilabilir */}
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
       <Footer />
     </>
