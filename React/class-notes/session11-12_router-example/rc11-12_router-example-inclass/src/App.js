@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Paths from "./pages/Paths";
 import PersonDetail from "./pages/PersonDetail";
+import FullStack from "./pages/FullStack";
+import Aws from "./pages/Aws";
 
 //? Link, NavLink ve Navigate componentleri declerative routing
 //? gerceklestirmek icin kullanilir.
@@ -30,7 +32,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/people" element={<People />} />
         <Route path="/people/:id" element={<PersonDetail />} />
-        <Route path="/paths" element={<Paths />} />
+
+        {/* nested route */}
+        <Route path="/paths" element={<Paths />}>
+          <Route path="fullstack" element={<FullStack />} />
+          <Route path="aws" element={<Aws />} />
+        </Route>
+
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="*" element={<NotFound />} /> */}
 
