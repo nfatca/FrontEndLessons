@@ -1,11 +1,29 @@
-import React from 'react'
+import React from "react";
+import {
+  Button,
+  FoodInput,
+  FormContainer,
+  HeaderContainer,
+  MainHeader,
+  Select,
+} from "./Header.style";
 
-const Header = () => {
+const Header = ({ setQuery }) => {
   return (
-    <div>
-      Header
-    </div>
-  )
-}
+    <HeaderContainer>
+      <MainHeader>Recipe App</MainHeader>
+      <FormContainer>
+        <FoodInput
+          type="text"
+          placeholder="Search"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <Button type="submit">Search</Button>
 
-export default Header
+        <Select></Select>
+      </FormContainer>
+    </HeaderContainer>
+  );
+};
+
+export default Header;
