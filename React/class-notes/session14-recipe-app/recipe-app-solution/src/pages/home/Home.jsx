@@ -7,8 +7,8 @@ import { HeaderText, HomeImg, ImgDiv } from "./Home.style";
 import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
-  const APP_ID = "7087351d";
-  const APP_KEY = "15b6346bbd0e26b6feec64ee4975e6bb";
+  const APP_ID = process.env.REACT_APP_APP_ID;
+  const APP_KEY = process.env.REACT_APP_APP_KEY;
   const [query, setQuery] = useState("egg");
   const [selectedMeal, setSelectedMeal] = useState("breakfast");
   const [recipes, setRecipes] = useState(null);
