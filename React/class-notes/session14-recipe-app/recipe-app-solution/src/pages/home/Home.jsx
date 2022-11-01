@@ -1,27 +1,57 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Header from "../../components/header/Header";
+import Cards from "../../components/cards/Cards";
+import { HeaderText, HomeImg, ImgDiv } from "./Home.style";
+import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
   const APP_ID = "7087351d";
   const APP_KEY = "15b6346bbd0e26b6feec64ee4975e6bb";
   const [query, setQuery] = useState("egg");
   const [selectedMeal, setSelectedMeal] = useState("breakfast");
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState(null);
+  const mealType = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
+
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${selectedMeal}`;
   const getData = async () => {
-    const { data } = await axios(url);
-    // console.log(data.hits);
-    setRecipes(data.hits);
+    if (query) {
+      try {
+        const { data } = await axios(url);
+        console.log(data.hits);
+        setRecipes(data.hits);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      alert("Fill the Form");
+    }
   };
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <div>
-      <Header setQuery={setQuery} />
+      <Header
+        setQuery={setQuery}
+        setSelectedMeal={setSelectedMeal}
+        mealType={mealType}
+        getData={getData}
+      />
+
+      {!recipes && (
+        <ImgDiv>
+          <HomeImg src={homeSvg} />
+        </ImgDiv>
+      )}
+      {recipes?.length === 0 && (
+        <HeaderText>The Food can not be found</HeaderText>
+      )}
+      {recipes?.length > 0 && <Cards recipes={recipes} />}
+
+      {/* <Cards /> */}
     </div>
   );
 };
