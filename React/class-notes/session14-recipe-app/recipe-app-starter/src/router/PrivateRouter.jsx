@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PrivateRouter = () => {
-  return (
-    <div>PrivateRouter</div>
-  )
-}
+  return <div>PrivateRouter</div>;
+};
 
-export default PrivateRouter
+export default PrivateRouter;
