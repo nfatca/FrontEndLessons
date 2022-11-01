@@ -13,8 +13,14 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const userInfo = {
+    username: "admin",
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    sessionStorage.setItem("user", JSON.stringify(userInfo));
     navigate(-1);
   };
 
