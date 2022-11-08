@@ -3,6 +3,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 
 //* Your web app's Firebase configuration
@@ -44,4 +46,19 @@ export const signIn = async (email, password, navigate) => {
   } catch (error) {
     alert(error.message);
   }
+};
+
+export const userObserver = () => {
+  //? kullanıcının signin olup olmadığını takip eden ve kuyllanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log(user);
+    } else {
+      console.log("user signed out");
+    }
+  });
+};
+
+export const logOut = () => {
+  signOut(auth);
 };
