@@ -5,7 +5,7 @@ import AppRouter from "./router/AppRouter";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[23242a]">
       {/* <AuthContextProvider children={<AppRouter />} /> */}
       <AuthContextProvider>
         <AppRouter />
