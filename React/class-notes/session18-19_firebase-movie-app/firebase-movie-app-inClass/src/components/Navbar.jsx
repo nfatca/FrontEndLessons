@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png";
 import { logOut } from "../auth/firebase";
+import { AuthContext } from "../context/AuthContextProvider";
 
 const Navbar = () => {
-  const currentUser = { displayName: "nurullah furkan" };
+  const { currentUser } = useContext(AuthContext);
+  // const currentUser = { displayName: "nurullah furkan" };
   // const currentUser = false;
   return (
     <>
