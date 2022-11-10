@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Header = () => {
+const Header = ({ count }) => {
+  console.log("Render => Header Component");
+
   return (
-    <div className='bg-warning text-center'>Header Componenti</div>
-  )
-}
+    <div className="bg-warning text-center">Header Componenti : {count}</div>
+  );
+};
 
-export default Header
+export default Header;

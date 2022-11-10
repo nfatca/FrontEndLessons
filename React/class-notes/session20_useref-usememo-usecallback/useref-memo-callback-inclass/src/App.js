@@ -4,38 +4,38 @@ import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [text, setText] = useState("")
-  const [search, setSearch] = useState("")
-  const [data, setData] = useState([])
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(data => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-        setData(data)
-      })
-  }, [])
-
-
+        setData(data);
+      });
+  }, []);
 
   return (
     <div className="container mt-2">
       <div>
-        <Header />
+        <Header count={count < 5 ? 0 : count} />
         <hr />
-        <HeaderMemo />
+        <HeaderMemo count={count < 5 ? 0 : count} />
       </div>
       <hr />
       <div>
         <p>{count}</p>
-        <button className='btn btn-danger' onClick={() => setCount(count + 1)}>Increment</button>
+        <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+          Increment
+        </button>
       </div>
       <hr />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type='text' />
-        <button type='button'>Search</button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <input type="text" />
+        <button type="button">Search</button>
       </div>
       <div className="row">
         <Card data={data} />
