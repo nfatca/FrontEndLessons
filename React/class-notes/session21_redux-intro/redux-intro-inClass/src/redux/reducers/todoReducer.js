@@ -6,7 +6,13 @@ import {
 } from "../types/todoTypes";
 
 const initialState = {
-  todoList: [{ id: new Date().getTime(), text: "Work Hard", completed: true }],
+  todoList: [
+    {
+      id: Math.ceil(Math.random() * 12550),
+      text: "Work Hard",
+      completed: true,
+    },
+  ],
 };
 
 const todoReducer = (state = initialState, { type, payload }) => {
@@ -15,13 +21,29 @@ const todoReducer = (state = initialState, { type, payload }) => {
       return {
         todoList: [
           ...state.todoList,
-          { id: new Date().getTime(), text: payload, completed: false },
+          {
+            id: Math.ceil(Math.random() * 12550),
+            text: payload,
+            completed: false,
+          },
         ],
       };
     case DELETE_TODO:
-      return {};
+      return {
+        todoList: [...state.todoList.filter((item) => item.id !== payload)],
+      };
     case TOGGLE_TODO:
-      return {};
+      return {
+        todoList: [
+          ...state.todoList.map((item) => {
+            if (item.id === payload) {
+              return { ...item, completed: !item.completed };
+            } else {
+              return { ...item };
+            }
+          }),
+        ],
+      };
     case CLEAR_TODO:
       return initialState;
 

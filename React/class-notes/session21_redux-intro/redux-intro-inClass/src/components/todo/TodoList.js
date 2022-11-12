@@ -13,7 +13,7 @@ const TodoList = () => {
     <div>
       <div>
         {todoList.map((todo) => (
-          <TodoItem key={todo.id} {...todo} />
+          <TodoItem key={todo?.id} {...todo} />
         ))}
       </div>
       <div className="clear-wrapper">

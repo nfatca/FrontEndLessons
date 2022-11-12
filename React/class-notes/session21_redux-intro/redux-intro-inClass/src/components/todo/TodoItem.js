@@ -1,20 +1,29 @@
-import React from 'react';
-import okLogo from '../../assets/ok.png';
-import deleteLogo from '../../assets/delete.png';
+import React from "react";
+import okLogo from "../../assets/ok.png";
+import deleteLogo from "../../assets/delete.png";
+import { useDispatch } from "react-redux";
+import { deleteTodo, toggleTodo } from "../../redux/actions/todoAction";
 
 const TodoItem = ({ completed, text, id }) => {
-  const handleToggle = () => {};
+  const dispatch = useDispatch();
+  const handleToggle = () => {
+    console.log(toggleTodo(id));
+    dispatch(toggleTodo(id));
+  };
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    // console.log(deleteTodo(id));
+    dispatch(deleteTodo(id));
+  };
 
   const styled = {
-    textDecoration: completed ? 'line-through' : 'none',
-    backgroundColor: completed ? '#A9A9A9' : 'orange',
-    borderRadius: '5px',
+    textDecoration: completed ? "line-through" : "none",
+    backgroundColor: completed ? "#A9A9A9" : "orange",
+    borderRadius: "5px",
   };
 
   return (
-    <div style={styled} className="todo-list">
+    <div style={styled} className="todo-list" key={id}>
       <h2 className="todoText">{text}</h2>
       <div>
         <span>
