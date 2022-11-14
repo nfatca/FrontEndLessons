@@ -11,7 +11,7 @@ const Home = () => {
   const getTutorials = async () => {
     try {
       const { data } = await axios(url);
-      console.log(data);
+      // console.log(data);
       setTutorials(data);
     } catch (error) {
       console.log(error);
@@ -25,8 +25,8 @@ const Home = () => {
 
   return (
     <>
-      <AddTutorial />
-      <TutorialList tutor={tutorials} />
+      <AddTutorial getTutorials={getTutorials} />
+      <TutorialList tutor={tutorials} getTutorials={getTutorials} />
     </>
   );
 };
