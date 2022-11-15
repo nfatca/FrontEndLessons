@@ -4,7 +4,7 @@ import { RiDeleteBack2Fill } from "react-icons/ri";
 const TaskList = ({ task }) => {
   return (
     <div>
-      {task.map((item) => {
+      {task?.map((item) => {
         const { id, task, date } = item;
         return (
           <div
