@@ -41,9 +41,9 @@ const Home = () => {
         {text}
       </Button>
 
-      {isOpen && <AddTask />}
+      {isOpen && <AddTask getTask={getTask} />}
 
-      <TaskList task={task} />
+      <TaskList task={task} getTask={getTask} />
     </div>
   );
 };
