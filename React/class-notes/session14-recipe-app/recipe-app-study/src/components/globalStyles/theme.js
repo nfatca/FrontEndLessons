@@ -1,4 +1,4 @@
-const theme = {
+export const theme = {
   colors: {
     navbarBgColor: "#E1F1DD",
     mainColor: "#00ADB5",
@@ -8,5 +8,3 @@ const theme = {
     lg: "902px",
   },
 };
-
-export default theme;

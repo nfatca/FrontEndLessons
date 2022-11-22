@@ -1,12 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./../components/nav/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "../components/globalStyles/GlobalStyles";
+import Navbar from "../components/nav/Navbar";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
-import About from "./../pages/about/About";
-import Detail from "./../pages/detail/Detail";
+import About from "../pages/about/About";
+import Detail from "../pages/detail/Detail";
 import PrivateRouter from "./PrivateRouter";
+
 const AppRouter = () => {
   return (
     <BrowserRouter>

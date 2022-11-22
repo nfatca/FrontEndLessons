@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormContainer,
   Header,
@@ -12,6 +12,8 @@ import meal from "../../assets/meal.svg";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [first, setfirst] = useState();
+
   const navigate = useNavigate();
 
   const userInfo = {
@@ -23,16 +25,18 @@ const Login = () => {
     sessionStorage.setItem("user", JSON.stringify(userInfo));
     navigate(-1);
   };
-
   return (
     <LoginContainer>
       <FormContainer>
         <StyledImg src={meal} />
-        <Header>{"<CW/>Recipe"}</Header>
-        <StyledForm onSubmit={handleSubmit}>
-          <StyledInput placeholder="Enter username" type="text" />
-          <StyledInput placeholder="Enter password" type="password" />
-          <StyledButton type="submit">LOGIN</StyledButton>
+        <Header>Recipe</Header>
+        <StyledForm>
+          <StyledInput placeholder="Enter Username" type="text" />
+          <StyledInput placeholder="Enter Password" type="password" />
+          <StyledButton type="submit" onClick={handleSubmit}>
+            Login
+          </StyledButton>
+          <StyledButton>Continue with Google</StyledButton>
         </StyledForm>
       </FormContainer>
     </LoginContainer>
