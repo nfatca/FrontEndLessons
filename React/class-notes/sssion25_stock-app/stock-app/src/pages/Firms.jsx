@@ -6,36 +6,19 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 import FirmCard from "../components/FirmCard";
-
-// import axios from "axios";
-
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchFail, fetchStart, getSuccess } from "../features/stockSlice";
+import { useState } from "react";
+import FirmModal from "../components/modals/FirmModal";
 
 const Firms = () => {
   const { getFirms } = useStockCalls();
   const { firms } = useSelector((state) => state.stock);
-
-  // const dispatch = useDispatch();
-
-  // const { token } = useSelector((state) => state.auth);
-  // const BASE_URL = "https://10001.fullstack.clarusway.com/";
-
-  // const getFirms = async () => {
-  //   const url = "firms";
-  //   dispatch(fetchStart());
-  //   try {
-  //     const { data } = await axios.get(`${BASE_URL}stock/firms/`, {
-  //       headers: { Authorization: `Token ${token}` },
-  //     });
-  //     console.log(data);
-  //     dispatch(getSuccess({ data, url }));
-  //   } catch (error) {
-  //     dispatch(fetchFail());
-  //     console.log(error);
-  //   }
-  // };
-
+  const [open, setOpen] = useState(false);
+  const [info, setInfo] = useState({
+    name: "",
+    phone: "",
+    address: "",
+    image: "",
+  });
   useEffect(() => {
     getFirms();
   }, []);
@@ -46,8 +29,10 @@ const Firms = () => {
         Firms
       </Typography>
 
-      <Button variant="contained">New Firm</Button>
-
+      <Button variant="contained" onClick={() => setOpen(true)}>
+        New Firm
+      </Button>
+      <FirmModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
       {firms?.length > 0 && (
         <Grid container justifyContent="center" gap={3}>
           {firms?.map((firm) => (
