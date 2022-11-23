@@ -33,11 +33,17 @@ const Firms = () => {
         New Firm
       </Button>
       <FirmModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
+
       {firms?.length > 0 && (
-        <Grid container justifyContent="center" gap={3}>
+        <Grid container justifyContent="center" gap={3} mt={3}>
           {firms?.map((firm) => (
             <Grid item>
-              <FirmCard key={firm.id} firm={firm} />
+              <FirmCard
+                key={firm.id}
+                firm={firm}
+                setOpen={setOpen}
+                setInfo={setInfo}
+              />
             </Grid>
           ))}
         </Grid>

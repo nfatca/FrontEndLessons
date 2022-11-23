@@ -6,7 +6,7 @@ import { FlexCenter, modalStyle } from "../../styles/globalStyles";
 import { Button, TextField } from "@mui/material";
 import useStockCalls from "../../hooks/useStockCalls";
 
-export default function FirmModal({ open, setOpen, info, setInfo }) {
+export default function ProductModal({ open, setOpen, info, setInfo }) {
   const { postFirm, putFirm } = useStockCalls();
 
   const handleSubmit = (e) => {

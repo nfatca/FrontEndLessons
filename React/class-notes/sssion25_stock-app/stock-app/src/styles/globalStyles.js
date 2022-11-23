@@ -1,5 +1,6 @@
 export const btnHoverStyle = {
   cursor: "pointer",
+  "&:hover": { color: "red" },
 };
 
 export const modalStyle = {
@@ -18,4 +19,15 @@ export const FlexCenter = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
+};
+export const flexRow = {
+  display: "flex",
+  justifyContent: "center",
+  gap: 1,
+};
+export const arrowStyle = {
+  display: "flex",
+  justifyContent: "center",
+  cursor: "pointer",
+  "&:hover": { color: "red" },
 };

@@ -1,16 +1,15 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import EditIcon from "@mui/icons-material/Edit";
-import { btnHoverStyle } from "../styles/globalStyles";
+import { CardHeader } from "@mui/material";
 import useStockCalls from "../hooks/useStockCalls";
+import { btnHoverStyle, FlexCenter, flexRow } from "../styles/globalStyles";
 
-export default function FirmCard({ firm, setOpen, setInfo }) {
-  const { deleteFirm } = useStockCalls();
+const BrandCard = ({ brand, setOpen, setInfo }) => {
+  const { deleteBrand } = useStockCalls();
 
   return (
     <Card
@@ -24,38 +23,32 @@ export default function FirmCard({ firm, setOpen, setInfo }) {
         flexDirection: "column",
       }}
     >
+      <CardHeader title={brand?.name} />
+
       <CardMedia
         height="325"
         width="250"
-        image={firm?.image}
+        image={brand?.image}
         sx={{ p: 1, objectFit: "contain" }}
         component="img"
-        alt="firm-img"
+        alt="brand-img"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {firm?.name}
-        </Typography>
-        <Typography gutterBottom variant="h6" component="div">
-          {firm?.phone}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {firm?.address}
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+
+      <CardActions sx={flexRow}>
         <EditIcon
           sx={btnHoverStyle}
           onClick={() => {
+            setInfo(brand);
             setOpen(true);
-            setInfo(firm);
           }}
         />
         <DeleteOutlineIcon
           sx={btnHoverStyle}
-          onClick={() => deleteFirm(firm?.id)}
+          onClick={() => deleteBrand(brand.id)}
         />
       </CardActions>
     </Card>
   );
-}
+};
+
+export default BrandCard;
