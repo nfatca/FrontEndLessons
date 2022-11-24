@@ -15,7 +15,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { btnHoverStyle, arrowStyle } from "../styles/globalStyles";
+import {
+  btnHoverStyle,
+  arrowStyle,
+  FlexCenter,
+  selectedFlex,
+} from "../styles/globalStyles";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
 import useSortColumn from "../hooks/useSortColumn";
@@ -26,6 +31,7 @@ const Products = () => {
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
   const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
   useEffect(() => {
     getBrands();
     getCategories();
@@ -52,6 +58,9 @@ const Products = () => {
   const isBrandSelected = (item) =>
     selectedBrands.includes(item.brand) || selectedBrands.length === 0;
 
+  const filteredProducts = products
+    ?.filter((item) => selectedBrands.includes(item.brand))
+    .map((item) => item.name);
   // console.log(selectedBrands);
   return (
     <Box>
@@ -64,7 +73,7 @@ const Products = () => {
       </Button>
       {/*
       <ProductModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
-      <Box>
+      <Box sx={selectedFlex} mt={3}>
         <MultiSelectBox
           handleSelect={(value) => setSelectedBrands(value)}
           placeholder="Select Brand"
@@ -79,16 +88,12 @@ const Products = () => {
           ))}
         </MultiSelectBox>
         <MultiSelectBox
-          handleSelect={(value) => setSelectedBrands(value)}
+          handleSelect={(value) => setSelectedProducts(value)}
           placeholder="Select Product"
           maxWidth="max-w-xs"
         >
-          {brands?.map((item) => (
-            <MultiSelectBoxItem
-              key={item.name}
-              value={item.name}
-              text={item.name}
-            />
+          {filteredProducts?.map((item) => (
+            <MultiSelectBoxItem key={item} value={item} text={item} />
           ))}
         </MultiSelectBox>
       </Box>

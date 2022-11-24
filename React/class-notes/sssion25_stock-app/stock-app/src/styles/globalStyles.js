@@ -20,6 +20,14 @@ export const FlexCenter = {
   justifyContent: "center",
   flexDirection: "column",
 };
+export const selectedFlex = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: { xs: "column", sm: "row" },
+  gap: 2,
+  alignItems: "center",
+};
+
 export const flexRow = {
   display: "flex",
   justifyContent: "center",
