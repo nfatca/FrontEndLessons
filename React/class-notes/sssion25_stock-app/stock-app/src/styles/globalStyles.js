@@ -33,6 +33,11 @@ export const flexRow = {
   justifyContent: "center",
   gap: 1,
 };
+export const flexColumn = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 2,
+};
 export const arrowStyle = {
   display: "flex",
   justifyContent: "center",

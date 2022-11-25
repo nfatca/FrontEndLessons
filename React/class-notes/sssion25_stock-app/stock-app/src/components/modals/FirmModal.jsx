@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { FlexCenter, modalStyle } from "../../styles/globalStyles";
+import { FlexCenter, modalStyle, flexColumn } from "../../styles/globalStyles";
 import { Button, TextField } from "@mui/material";
 import useStockCalls from "../../hooks/useStockCalls";
 
@@ -37,7 +37,7 @@ export default function FirmModal({ open, setOpen, info, setInfo }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
-          <Box component="form" onSubmit={handleSubmit} sx={FlexCenter}>
+          <Box component="form" onSubmit={handleSubmit} sx={flexColumn}>
             <TextField
               label="Firm Name"
               name="name"

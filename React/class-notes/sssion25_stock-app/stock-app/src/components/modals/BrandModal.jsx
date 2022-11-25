@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexCenter, modalStyle } from "../../styles/globalStyles";
+import { flexColumn, modalStyle } from "../../styles/globalStyles";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -36,7 +36,7 @@ export default function BrandModal({ open, setOpen, info, setInfo }) {
       aria-describedby="modal-modal-description"
     >
       <Box sx={modalStyle}>
-        <Box sx={FlexCenter} component={"form"} onSubmit={handleSubmit}>
+        <Box sx={flexColumn} component={"form"} onSubmit={handleSubmit}>
           <TextField
             label="Brand Name"
             name="name"

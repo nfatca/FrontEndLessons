@@ -1,12 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useStockCalls from "../hooks/useStockCalls";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { useSelector } from "react-redux";
-import { useState } from "react";
-import ProductModal from "../components/modals/ProductModal";
-import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -15,27 +11,38 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
-import {
-  btnHoverStyle,
-  arrowStyle,
-  FlexCenter,
-  selectedFlex,
-} from "../styles/globalStyles";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
+
+import { useSelector } from "react-redux";
+import {
+  arrowStyle,
+  btnHoverStyle,
+  selectedFlex,
+} from "../styles/globalStyles";
 import useSortColumn from "../hooks/useSortColumn";
 import { MultiSelectBox, MultiSelectBoxItem } from "@tremor/react";
+import ProductModal from "../components/modals/ProductModal";
+
 const Products = () => {
-  const { getBrands, getCategories, getProducts } = useStockCalls();
+  const {
+    // getBrands,
+    // getCategories,
+    // getProducts,
+    deleteProduct,
+    getProCatBrands,
+  } = useStockCalls();
   const { products, brands } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
+
   useEffect(() => {
-    getBrands();
-    getCategories();
-    getProducts();
+    // getBrands();
+    // getCategories();
+    // getProducts();
+    getProCatBrands();
   }, []);
 
   const columnObj = {
@@ -49,19 +56,21 @@ const Products = () => {
     columnObj
   );
 
-  //? Verilen item secilen brand'lerin icerisinde varsa true dondurur
-  //? VEYA hic brand secilmemisse true dondurur. Aksinde false
-  //? dondurur.
-  //? Bu fonksiyon filter() icerisinde yazilacagi icin false dondurmesi
+  //? Verilen item secilen brand'larin icerisinde varsa true dondurur
+  //? VEYA hic brand secilmemisse true dondurur.aksinde false dondurur.
+  //? bu fonksiyon filter() icerisinde yazilacagi icin false dondurmesi
   //? durumunda filter bir suzme yapmamis olur.
-
   const isBrandSelected = (item) =>
     selectedBrands.includes(item.brand) || selectedBrands.length === 0;
 
-  const filteredProducts = products
-    ?.filter((item) => selectedBrands.includes(item.brand))
+  const isProductSelected = (item) =>
+    selectedProducts.includes(item.name) || selectedProducts.length === 0;
+
+  //? products dizisinden secilmis brand'larin product name'lerini bir diziye saklar
+  const filtredProducts = products
+    ?.filter((item) => selectedBrands?.includes(item.brand))
     .map((item) => item.name);
-  // console.log(selectedBrands);
+
   return (
     <Box>
       <Typography variant="h4" color="error" mb={4}>
@@ -71,13 +80,10 @@ const Products = () => {
       <Button variant="contained" onClick={() => setOpen(true)}>
         New Product
       </Button>
-      {/*
-      <ProductModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
       <Box sx={selectedFlex} mt={3}>
         <MultiSelectBox
-          handleSelect={(value) => setSelectedBrands(value)}
+          handleSelect={(item) => setSelectedBrands(item)}
           placeholder="Select Brand"
-          maxWidth="max-w-xs"
         >
           {brands?.map((item) => (
             <MultiSelectBoxItem
@@ -88,15 +94,21 @@ const Products = () => {
           ))}
         </MultiSelectBox>
         <MultiSelectBox
-          handleSelect={(value) => setSelectedProducts(value)}
+          handleSelect={(item) => setSelectedProducts(item)}
           placeholder="Select Product"
-          maxWidth="max-w-xs"
         >
-          {filteredProducts?.map((item) => (
+          {filtredProducts?.map((item) => (
             <MultiSelectBoxItem key={item} value={item} text={item} />
           ))}
         </MultiSelectBox>
       </Box>
+
+      <ProductModal
+        open={open}
+        setOpen={setOpen}
+        info={info}
+        setInfo={setInfo}
+      />
 
       {sortedData?.length > 0 && (
         <TableContainer component={Paper} sx={{ mt: 3 }} elevation={10}>
@@ -106,33 +118,24 @@ const Products = () => {
                 <TableCell align="center">#</TableCell>
                 <TableCell align="center">Category</TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("brand", "text")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("brand")}>
                     <div>Brand</div>
-                    {columns.brand !== 1 && <UpgradeIcon />}
-                    {columns.brand === 1 && <VerticalAlignBottomIcon />}
+                    {columns.brand === 1 && <UpgradeIcon />}
+                    {columns.brand !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("name", "text")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("name")}>
                     <div>Name</div>
-                    {columns.name !== 1 && <UpgradeIcon />}
-                    {columns.name === 1 && <VerticalAlignBottomIcon />}
+                    {columns.name === 1 && <UpgradeIcon />}
+                    {columns.name !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("stock", "number")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("stock")}>
                     <div>Stock</div>
-                    {columns.stock !== 1 && <UpgradeIcon />}
-                    {columns.stock === 1 && <VerticalAlignBottomIcon />}
+                    {columns.stock === 1 && <UpgradeIcon />}
+                    {columns.stock !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">Operation</TableCell>
@@ -141,6 +144,7 @@ const Products = () => {
             <TableBody>
               {sortedData
                 ?.filter((item) => isBrandSelected(item))
+                .filter((item) => isProductSelected(item))
                 .map((product, index) => (
                   <TableRow
                     key={product.name}
@@ -153,7 +157,10 @@ const Products = () => {
                     <TableCell align="center">{product.brand}</TableCell>
                     <TableCell align="center">{product.name}</TableCell>
                     <TableCell align="center">{product.stock}</TableCell>
-                    <TableCell align="center">
+                    <TableCell
+                      align="center"
+                      onClick={() => deleteProduct(product.id)}
+                    >
                       <DeleteIcon sx={btnHoverStyle} />
                     </TableCell>
                   </TableRow>
