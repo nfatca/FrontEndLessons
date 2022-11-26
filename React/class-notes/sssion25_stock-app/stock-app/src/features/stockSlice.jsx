@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const stockSlice = createSlice({
-  name: "auth",
+  name: "stock",
 
   initialState: {
     purchases: null,
