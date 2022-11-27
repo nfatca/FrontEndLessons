@@ -115,8 +115,8 @@ const Purchases = () => {
                 <TableCell align="center">
                   <Box sx={arrowStyle} onClick={() => handleSort("date")}>
                     <div>Date</div>
-                    {columns.brand === 1 && <UpgradeIcon />}
-                    {columns.brand !== 1 && <VerticalAlignBottomIcon />}
+                    {columns.date === 1 && <UpgradeIcon />}
+                    {columns.date !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">Category</TableCell>
@@ -126,16 +126,16 @@ const Purchases = () => {
                 <TableCell align="center">
                   <Box sx={arrowStyle} onClick={() => handleSort("quantity")}>
                     <div>Quantity</div>
-                    {columns.brand === 1 && <UpgradeIcon />}
-                    {columns.brand !== 1 && <VerticalAlignBottomIcon />}
+                    {columns.quantity === 1 && <UpgradeIcon />}
+                    {columns.quantity !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">Price</TableCell>
                 <TableCell align="center">
                   <Box sx={arrowStyle} onClick={() => handleSort("amount")}>
                     <div>Amount</div>
-                    {columns.brand === 1 && <UpgradeIcon />}
-                    {columns.brand !== 1 && <VerticalAlignBottomIcon />}
+                    {columns.amount === 1 && <UpgradeIcon />}
+                    {columns.amount !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">Operation</TableCell>
