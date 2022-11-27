@@ -18,9 +18,7 @@ const useSortColumn = (data, columnObj) => {
       sortedData
         ?.map((item) => item)
         .sort((a, b) => {
-          if (type === "date") {
-            return columns[arg] * (new Date(a[arg]) - new Date(b[arg]));
-          } else if (type === "number") {
+          if (type === "number") {
             return columns[arg] * (a[arg] - b[arg]);
           } else {
             if (columns[arg] === 1) {

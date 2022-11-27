@@ -35,14 +35,19 @@ const useStockCalls = () => {
   const getProCatBrands = async () => {
     dispatch(fetchStart());
     try {
-      const [products, categories, brands] = await Promise.all([
+      const [products, categories, brands, purchases] = await Promise.all([
         axiosWithToken.get("stock/products/"),
         axiosWithToken.get("stock/categories/"),
         axiosWithToken.get("stock/brands/"),
         axiosWithToken.get("stock/purchases/"),
       ]);
       dispatch(
-        getProCatBrandsSuccess([products?.data, categories?.data, brands?.data])
+        getProCatBrandsSuccess([
+          products?.data,
+          categories?.data,
+          brands?.data,
+          purchases?.data,
+        ])
       );
     } catch (error) {
       console.log(error);
@@ -64,6 +69,7 @@ const useStockCalls = () => {
   const deleteFirm = (id) => deleteStockData("firms", id);
   const deleteBrand = (id) => deleteStockData("brands", id);
   const deleteProduct = (id) => deleteStockData("products", id);
+  const deletePurchases = (id) => deleteStockData("purchases", id);
   //!------------- POST CALLS ----------------
   const postStockData = async (info, url) => {
     try {
@@ -78,6 +84,7 @@ const useStockCalls = () => {
 
   const postFirm = (info) => postStockData(info, "firms");
   const postBrand = (info) => postStockData(info, "brands");
+  const postPurchase = (info) => postStockData(info, "purchases");
 
   //!------------- PUT CALLS ----------------
   const putStockData = async (info, url) => {
@@ -93,6 +100,7 @@ const useStockCalls = () => {
 
   const putFirm = (info) => putStockData(info, "firms");
   const putBrand = (info) => putStockData(info, "brands");
+  const putPurchase = (info) => putStockData(info, "purchases");
 
   return {
     getStockData,
@@ -106,12 +114,15 @@ const useStockCalls = () => {
     deleteFirm,
     deleteBrand,
     deleteProduct,
+    deletePurchases,
     postFirm,
     postStockData,
     postBrand,
+    postPurchase,
     putFirm,
     putStockData,
     putBrand,
+    putPurchase,
   };
 };
 
