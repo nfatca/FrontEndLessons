@@ -1,4 +1,4 @@
-# Redux Toolkit Ornegi
+# https://stock-app-iota.vercel.app/stock/
 
 ## `Kurulum`
 
