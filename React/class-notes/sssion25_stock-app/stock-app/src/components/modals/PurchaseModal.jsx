@@ -1,81 +1,80 @@
 import React from "react";
-import { flexColumn, modalStyle } from "../../styles/globalStyles";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import FormControl from "@mui/material/FormControl";
+import { useNavigate } from "react-router-dom";
 import useStockCalls from "../../hooks/useStockCalls";
 import { useSelector } from "react-redux";
-import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
-import { useEffect } from "react";
+import { flexColumn, modalStyle } from "../../styles/globalStyle";
 
-export default function PurchaseModal({ open, setOpen, info, setInfo }) {
-  const { postPurchase, putPurchase, getProCatBrands } = useStockCalls();
-  const { products, brands, firms } = useSelector((state) => state.stock);
+export default function ModalPurchase({ open, setOpen, info, setInfo }) {
+  const navigate = useNavigate();
+  const { putPurchase, postPurchase } = useStockCalls();
+  const { firms, brands, products } = useSelector((state) => state.stock);
 
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
-    setInfo({ ...info, [name]: value });
+    setInfo({ ...info, [name]: Number(value) });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setOpen(false);
+
     if (info.id) {
-      console.log("start put purchase");
       putPurchase(info);
     } else {
-      console.log("start post purchase");
-
       postPurchase(info);
     }
+    setOpen(false);
     setInfo({});
   };
-  useEffect(() => {
-    getProCatBrands();
-  }, []);
 
   return (
     <Modal
       open={open}
-      onClose={() => {
-        setOpen(false);
-        setInfo({});
-      }}
+      onClose={() => setOpen(false)}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
       <Box sx={modalStyle}>
         <Box sx={flexColumn} component={"form"} onSubmit={handleSubmit}>
-          <FormControl fullWidth>
-            <InputLabel variant="outlined" id="firm-select">
+          <FormControl>
+            <InputLabel variant="outlined" id="firm-select-label">
               Firm
             </InputLabel>
             <Select
-              labelId="firm-select"
+              labelId="firm-select-label"
               label="Firm"
-              id="firm-select"
               name="firm_id"
               value={info?.firm_id || ""}
               onChange={handleChange}
               required
             >
-              {firms?.map((firm) => {
+              <MenuItem onClick={() => navigate("/stock/firms")}>
+                Add New Firm
+              </MenuItem>
+              <hr />
+              {firms?.map((item) => {
                 return (
-                  <MenuItem key={firm.id} value={firm.id}>
-                    {firm.name}
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
                   </MenuItem>
                 );
               })}
             </Select>
           </FormControl>
-
-          <FormControl fullWidth>
-            <InputLabel variant="outlined" id="brand-select">
-              Brands
+          <FormControl>
+            <InputLabel variant="outlined" id="brand-select-label">
+              Brand
             </InputLabel>
             <Select
-              labelId="brand-select"
+              labelId="brand-select-label"
               label="Brand"
               id="brand-select"
               name="brand_id"
@@ -83,64 +82,69 @@ export default function PurchaseModal({ open, setOpen, info, setInfo }) {
               onChange={handleChange}
               required
             >
-              {brands?.map((brand) => {
+              <MenuItem onClick={() => navigate("/stock/brands")}>
+                Add New Brand
+              </MenuItem>
+              <hr />
+              {brands?.map((item) => {
                 return (
-                  <MenuItem key={brand.id} value={brand.id}>
-                    {brand.name}
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
                   </MenuItem>
                 );
               })}
             </Select>
           </FormControl>
-
-          <FormControl fullWidth>
-            <InputLabel variant="outlined" id="product-select">
-              Products
+          <FormControl>
+            <InputLabel variant="outlined" id="product-select-label">
+              Product
             </InputLabel>
             <Select
-              labelId="product-select"
-              label="product"
+              labelId="product-select-label"
+              label="Product"
               id="product-select"
               name="product_id"
               value={info?.product_id || ""}
               onChange={handleChange}
               required
             >
-              {products?.map((product) => {
+              <MenuItem onClick={() => navigate("/stock/products")}>
+                Add New Product
+              </MenuItem>
+              <hr />
+              {products?.map((item) => {
                 return (
-                  <MenuItem key={product.id} value={product.id}>
-                    {product.name}
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
                   </MenuItem>
                 );
               })}
             </Select>
           </FormControl>
-
           <TextField
-            margin="dense"
             label="Quantity"
-            name="quantity"
             id="quantity"
+            name="quantity"
             type="number"
             variant="outlined"
+            InputProps={{ inputProps: { min: 0 } }}
             value={info?.quantity || ""}
             onChange={handleChange}
             required
           />
           <TextField
-            margin="dense"
             label="Price"
-            name="price"
             id="price"
             type="number"
             variant="outlined"
+            name="price"
+            InputProps={{ inputProps: { min: 0 } }}
             value={info?.price || ""}
             onChange={handleChange}
             required
           />
-
           <Button type="submit" variant="contained" size="large">
-            Add New Product
+            {info?.id ? "Update Purchase" : "Add New Purchase"}
           </Button>
         </Box>
       </Box>

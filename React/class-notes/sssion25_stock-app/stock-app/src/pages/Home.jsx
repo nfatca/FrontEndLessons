@@ -1,16 +1,17 @@
-import useStockCalls from "../hooks/useStockCalls";
-import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import { useEffect } from "react";
-import KpiCards from "../components/KpiCards";
 import Charts from "../components/Charts";
+import KpiCards from "../components/KpiCards";
+import useStockCalls from "../hooks/useStockCalls";
 
 const Home = () => {
-  const { getPurchases, getSales } = useStockCalls();
+  const { getAllStockData } = useStockCalls();
+
+  // ! Uygulama ilk olarak acildiginda tum stock verilerini paralel olarak getirmeyi baslat
   useEffect(() => {
-    getPurchases();
-    getSales();
-  }, []);
+    getAllStockData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box>

@@ -17,6 +17,7 @@ export const registerSchema = Yup.object().shape({
 
   email: Yup.string().email().required(),
   password: Yup.string()
+    .required()
     .min(8, "Password must have min 8 chars")
     .max(16, "Password must have max 16 chars")
     .matches(/\d+/, "Password must have a number")

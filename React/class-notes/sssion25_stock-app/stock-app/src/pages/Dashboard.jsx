@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -14,28 +14,33 @@ import MenuListItems from "../components/MenuListItems";
 import { blueGrey } from "@mui/material/colors";
 import useAuthCalls from "../hooks/useAuthCalls";
 import { useSelector } from "react-redux";
-import { Button } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import { Container } from "@mui/material";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
+
 function Dashboard(props) {
-  const { currentUser, error } = useSelector((state) => state.auth);
+  const { currentUser } = useSelector((state) => state.auth);
   const { logout } = useAuthCalls();
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
   const drawer = (
     <div>
       <Toolbar />
       <Divider />
       <MenuListItems />
-      <Divider />
     </div>
   );
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -87,7 +92,11 @@ function Dashboard(props) {
               width: drawerWidth,
             },
           }}
-          PaperProps={{ sx: { backgroundColor: blueGrey[900] } }}
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
+            },
+          }}
         >
           {drawer}
         </Drawer>
@@ -100,8 +109,12 @@ function Dashboard(props) {
               width: drawerWidth,
             },
           }}
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
+            },
+          }}
           open
-          PaperProps={{ sx: { backgroundColor: blueGrey[900] } }}
         >
           {drawer}
         </Drawer>
@@ -120,5 +133,4 @@ function Dashboard(props) {
     </Box>
   );
 }
-
 export default Dashboard;

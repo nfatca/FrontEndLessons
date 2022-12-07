@@ -1,24 +1,22 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useSortColumn = (data, columnObj) => {
   //? Siralanacak local state (sutun verilerinin local state hali)
   const [sortedData, setSortedData] = useState(data);
   const [columns, setColumns] = useState(columnObj);
 
-  //! product state'i her guncellendiginde local state'i de guncelle
+  //! data state'i her guncellendiginde local state'i de guncelle
   useEffect(() => {
     setSortedData(data);
   }, [data]);
 
-  //? Jenerik Sutun siralama fonksiyonu
-  const handleSort = (arg, type) => {
+  const handleSort = (arg) => {
     setColumns({ ...columns, [arg]: columns[arg] * -1 });
     setSortedData(
       sortedData
         ?.map((item) => item)
         .sort((a, b) => {
-          if (type === "number") {
+          if (!isNaN(Number(a[arg]))) {
             return columns[arg] * (a[arg] - b[arg]);
           } else {
             if (columns[arg] === 1) {
@@ -30,6 +28,7 @@ const useSortColumn = (data, columnObj) => {
         })
     );
   };
+
   return { sortedData, handleSort, columns };
 };
 

@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import axios from "axios";
 import {
   fetchStart,
   loginSuccess,
@@ -7,7 +6,7 @@ import {
   registerSuccess,
   fetchFail,
 } from "../features/authSlice";
-
+import { axiosPublic } from "./useAxios";
 import { useNavigate } from "react-router-dom";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 
@@ -15,15 +14,10 @@ const useAuthCalls = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const BASE_URL = "https://14148.fullstack.clarusway.com/";
-
   const login = async (userInfo) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios.post(
-        `${BASE_URL}account/auth/login/`,
-        userInfo
-      );
+      const { data } = await axiosPublic.post("account/auth/login/", userInfo);
 
       dispatch(loginSuccess(data));
       toastSuccessNotify("Login performed");
@@ -37,7 +31,7 @@ const useAuthCalls = () => {
   const logout = async () => {
     dispatch(fetchStart());
     try {
-      await axios.post(`${BASE_URL}account/auth/logout/`);
+      await axiosPublic.post("account/auth/logout/");
       dispatch(logoutSuccess());
       toastSuccessNotify("Logout performed");
       navigate("/");
@@ -50,10 +44,7 @@ const useAuthCalls = () => {
   const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios.post(
-        `${BASE_URL}account/register/`,
-        userInfo
-      );
+      const { data } = await axiosPublic.post("account/register/", userInfo);
       dispatch(registerSuccess(data));
       toastSuccessNotify("Register performed");
       navigate("/stock");

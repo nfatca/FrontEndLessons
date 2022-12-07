@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import BrandCard from "../components/BrandCard";
 import BrandModal from "../components/modals/BrandModal";
 import useStockCalls from "../hooks/useStockCalls";
-import { FlexCenter } from "../styles/globalStyles";
+import { flexCenter } from "../styles/globalStyle";
 
 const Brands = () => {
   const { getBrands } = useStockCalls();
@@ -25,7 +25,7 @@ const Brands = () => {
       <Button
         variant="contained"
         onClick={() => {
-          setInfo();
+          setInfo({});
           setOpen(true);
         }}
       >
@@ -41,7 +41,7 @@ const Brands = () => {
       )}
 
       {brands?.length > 0 && (
-        <Grid container justifyContent="center" gap={3} mt={3}>
+        <Grid container sx={flexCenter} mt={4}>
           {brands?.map((brand) => (
             <Grid item key={brand.id}>
               <BrandCard brand={brand} setOpen={setOpen} setInfo={setInfo} />
