@@ -31,16 +31,6 @@ const FormComponent = ({ info, setInfo, handleSubmit }) => {
       style={{ width: "300" }}
     >
       <p className="contact-header">
-        <div>
-          <a
-            href="https://clarusway.com/"
-            className="design"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <code>{"<Clarusway/> "}</code>
-          </a>
-        </div>
         <span className="design header">design</span>
       </p>
       <h2 className="contact-header">Add Contact</h2>
